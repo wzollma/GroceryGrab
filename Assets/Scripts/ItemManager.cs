@@ -6,7 +6,7 @@ public class ItemManager : MonoBehaviour
 {
     public static ItemManager instance;
 
-    public Item[] allItems;
+    public ItemInfo[] allItems;
 
     private void Awake()
     {
@@ -17,6 +17,11 @@ public class ItemManager : MonoBehaviour
         }
 
         instance = this;
+    }
+
+    public ItemInfo getRandomItemInfo()
+    {
+        return allItems[Random.Range(0, allItems.Length)];
     }
 
     // Start is called before the first frame update
