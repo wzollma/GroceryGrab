@@ -11,6 +11,9 @@ public class Item : MonoBehaviour
     public string itemName;
     public bool isRequest;
     public bool destroyed;
+    private bool grabbable;
+
+    private Customer grabbingCustomer;
 
     Rigidbody rb;
     OutlineScript outlineScript;
@@ -68,12 +71,15 @@ public class Item : MonoBehaviour
     public void onPickUp()
     {
         rb.useGravity = false;
+        grabbable = true;
     }
 
     public void onDrop()
     {
         Debug.Log("Dropped item");
         rb.useGravity = true;
+
+        //make so that hitting floor makes stuff not grabbable
     }
 
     public void giveToCustomer()
@@ -81,5 +87,25 @@ public class Item : MonoBehaviour
         Debug.Log("destroying item: " + name);
         destroyed = true;
         Destroy(gameObject);        
+    }
+
+    public bool canBeGrabbedByCustomer(Customer customer)
+    {
+        return grabbable && (grabbingCustomer == null || customer.Equals(grabbingCustomer));
+    }
+
+    public void grabFromShelf(Customer customer)
+    {
+        grabbingCustomer = customer;
+        grabbable = true;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (grabbable && collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")))
+        {
+            Debug.Log("item: " + itemName + " hitting ground");
+            grabbable = false;
+        }
     }
 }
