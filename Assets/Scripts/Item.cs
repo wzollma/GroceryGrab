@@ -35,12 +35,22 @@ public class Item : MonoBehaviour
 
     public void disableNonGFXComponents()
     {
-        if (this is ItemRequest)
-            return;
+        //if (this is ItemRequest)
+        //    return;
 
         GetComponent<OutlineScript>().enabled = false;
         nonTriggerCollider.enabled = false;
         triggerCollider.enabled = false;
+        removeRB();
+    }
+
+    public void setGravity(bool on)
+    {
+        GetComponent<Rigidbody>().useGravity = on;
+    }
+
+    public void removeRB()
+    {
         Destroy(GetComponent<Rigidbody>());
     }
 

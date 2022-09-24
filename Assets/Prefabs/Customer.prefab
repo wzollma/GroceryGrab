@@ -114,9 +114,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIItemHolder: {fileID: 1508414793529574490}
-  requestPrefab: {fileID: 7346929686697827818, guid: 7693332a6de318d4c99bd0d190af2745,
-    type: 3}
+  moveSpeed: 5
+  minDistFromSection: 1.3
+  grabAnimTime: 0.5
   state: 0
+  itemList: []
 --- !u!136 &1508414792907132314
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -334,7 +336,7 @@ RectTransform:
   m_GameObject: {fileID: 1508414793529574491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.297}
-  m_LocalScale: {x: 0.30457532, y: 0.30457532, z: 0.30457532}
+  m_LocalScale: {x: 0.76143825, y: 0.76143825, z: 0.76143825}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1508414793460768171}
