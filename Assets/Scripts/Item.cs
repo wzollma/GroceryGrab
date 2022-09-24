@@ -9,16 +9,13 @@ public class Item : MonoBehaviour
     public Collider triggerCollider;
 
     public string itemName;
+    public bool isRequest;
+    public bool destroyed;
 
     Rigidbody rb;
     OutlineScript outlineScript;
 
     bool isUI;
-
-    public Item(string itemName)
-    {
-        this.itemName = itemName;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +35,9 @@ public class Item : MonoBehaviour
 
     public void disableNonGFXComponents()
     {
+        if (this is ItemRequest)
+            return;
+
         GetComponent<OutlineScript>().enabled = false;
         nonTriggerCollider.enabled = false;
         triggerCollider.enabled = false;
@@ -68,6 +68,8 @@ public class Item : MonoBehaviour
 
     public void giveToCustomer()
     {
-        Destroy(gameObject);
+        Debug.Log("destroying item: " + name);
+        destroyed = true;
+        Destroy(gameObject);        
     }
 }

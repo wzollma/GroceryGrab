@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemRequest : MonoBehaviour
+public class ItemRequest : Item
 {
     public Item itemPrefab;
 

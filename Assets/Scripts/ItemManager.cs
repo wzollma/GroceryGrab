@@ -19,6 +19,11 @@ public class ItemManager : MonoBehaviour
         instance = this;
     }
 
+    public Item getRandomItemPrefab()
+    {
+        return allItems[Random.Range(0, allItems.Length)];
+    }
+
     // Start is called before the first frame update
     void Start()
     {
