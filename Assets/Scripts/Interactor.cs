@@ -78,8 +78,7 @@ public class Interactor : MonoBehaviour
     }
 
     public void letGo()
-    {
-        Debug.Log("Dropped item");
+    {        
         if (pickedUpItem != null)
             pickedUpItem.onDrop();
 

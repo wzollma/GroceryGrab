@@ -34,9 +34,7 @@ public class OutlineScript : MonoBehaviour
         Vector3 prevScale = outlineObj.transform.localScale;
         outlineObj.transform.localScale = new Vector3(prevScale.x / thisScale.x, prevScale.y / thisScale.y, prevScale.y / thisScale.z);
         Vector3 prevLossy = outlineObj.transform.localScale;
-        Debug.Log("Pre: " + scaleFactor);
         scaleFactor = -1 + (scaleFactor + 1) * Mathf.Max(prevLossy.x / thisScale.x, prevLossy.y / thisScale.y, prevLossy.z / thisScale.z);
-        Debug.Log("Post: " + scaleFactor);
         Renderer rend = outlineObj.GetComponent<Renderer>();
 
         rend.material = outlineMat;
@@ -44,9 +42,9 @@ public class OutlineScript : MonoBehaviour
         rend.material.SetFloat("_Scale", scaleFactor);
         rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
-        outlineObj.GetComponent<OutlineScript>().enabled = false;
-        outlineObj.GetComponent<Collider>().enabled = false;
-        Destroy(outlineObj.GetComponent<Rigidbody>());
+        Item itemObj = outlineObj.GetComponent<Item>();
+        if (itemObj != null)
+            itemObj.disableNonGFXComponents();
 
         rend.enabled = false;
 

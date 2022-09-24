@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3376334227654349364}
   - component: {fileID: 3376334227654349370}
   - component: {fileID: 3376334227654349371}
+  - component: {fileID: 4351453503231686915}
   m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
@@ -127,6 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936d6e42df31ca94295f696ea57d0ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIRotationSpeed: 40
+  nonTriggerCollider: {fileID: 3376334227654349367}
+  triggerCollider: {fileID: 4351453503231686915}
+  itemName: 1
 --- !u!54 &3376334227654349371
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,3 +148,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!65 &4351453503231686915
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3376334227654349365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1, z: 1.1}
+  m_Center: {x: 0, y: 0, z: 0}
