@@ -11,6 +11,13 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    public AudioSource[] themes;
+
+    [SerializeField] private float FADE_TIME = 4f;
+
+    float targetVolume;
+    int curTheme;
+
     // Use this for initialization
     void Awake()
     {
@@ -33,6 +40,10 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
+
+        targetVolume = themes[0].volume;
+
+        playTheme(0, true);
     }
 
     public void Play(string name)
@@ -80,5 +91,46 @@ public class AudioManager : MonoBehaviour
         }
 
         return s.source.time;
+    }
+    public static void incTheme()
+    {
+        playTheme((instance.curTheme + 1) % instance.themes.Length, false);
+    }
+
+    public static void playTheme(int themeNum, bool force)
+    {
+        Math.Clamp(themeNum, 0, instance.themes.Length);
+
+        if (force)
+        {
+            for (int i = 0; i < instance.themes.Length; i++)
+                instance.themes[i].volume = (i == themeNum) ? instance.targetVolume : 0;
+        }        
+        else
+        {
+            instance.StartCoroutine(instance.fadeTracks(instance.curTheme, themeNum));
+        }
+    }
+
+    IEnumerator fadeTracks(int prevTrackNum, int newTrackNum)
+    {        
+        float startTime = Time.time;
+
+        AudioSource prevTrack = instance.themes[prevTrackNum];
+        AudioSource newTrack = instance.themes[newTrackNum];
+        
+        newTrack.volume = 0;
+
+        while (Time.time < startTime + FADE_TIME)
+        {
+            yield return null;
+
+            prevTrack.volume = targetVolume * (1 - ((Time.time - startTime) / FADE_TIME));
+            newTrack.volume = targetVolume * (Time.time - startTime) / FADE_TIME;
+        }
+
+        prevTrack.volume = 0;
+        newTrack.volume = targetVolume;
+        curTheme = newTrackNum;
     }
 }

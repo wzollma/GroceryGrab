@@ -53,6 +53,9 @@ public class Player : MonoBehaviour
 
     public void setIsSprintKeyDown(bool on)
     {
+        if (on)
+            AudioManager.incTheme();
+
         if (cantSprint && sprintKeyDown && !on)
             hasLiftedSprintKey = true;
         else if (on)
