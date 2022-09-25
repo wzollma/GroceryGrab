@@ -3,7 +3,12 @@ guid: 3faea3e02e821794b9a8ca9636f6afcc
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GROCERY_ATLAS
+    second: {fileID: 2100000, guid: a83b2fcfa822cd5469bfad72ca609973, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
