@@ -26,6 +26,9 @@ public class Item : MonoBehaviour, Interactable
     {
         rb = GetComponent<Rigidbody>();
         outlineScript = GetComponent<OutlineScript>();
+
+        if (rb != null)
+            rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
     // Update is called once per frame
