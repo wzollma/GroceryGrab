@@ -9,6 +9,8 @@ public class Customer : MonoBehaviour
     [SerializeField] private Transform UIItemHolder;    
     [SerializeField] private GameObject canvasObj;
     [SerializeField] private Image timerFillCircle;
+    [SerializeField] private GameObject angryObj;
+    [SerializeField] private GameObject positionPos;
     [SerializeField] private float moveSpeed = 6f;
     [SerializeField] private float minDistFromSection = 1.3f;
     [SerializeField] private float grabAnimTime = .5f;
@@ -65,6 +67,9 @@ public class Customer : MonoBehaviour
         ItemInfo topItem = getItemInfoAtTopOfList();
         if (topItem == null && state.Equals(State.Leaving))
             setState(State.Leaving);
+
+        angryObj.SetActive(state.Equals(State.Angry));
+        positionPos.SetActive(!state.Equals(State.Angry));
 
         if (Time.time < withoutPreviewStartTime + timeBetweenRequests)
             return;
