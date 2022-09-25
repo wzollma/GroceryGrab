@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -29,6 +30,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+                MenuManager.instance.startGame();
+            else if (Keyboard.current.eKey.wasPressedThisFrame)
+                MenuManager.instance.restart();
+        }
+
         Cursor.visible = true;
 
         if (isSprinting)
