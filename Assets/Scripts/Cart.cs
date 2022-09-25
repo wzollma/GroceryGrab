@@ -22,12 +22,17 @@ public class Cart : MonoBehaviour, Interactable
         startY = transform.position.y;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 prevPos = transform.position;
 
         if (prevPos.y != startY)
             transform.position = new Vector3(prevPos.x, startY, prevPos.z);
+
+        Vector3 prevRot = transform.rotation.eulerAngles;
+
+        if (prevRot.x != 0 || prevRot.z != 0)
+            transform.rotation = Quaternion.Euler(0, prevRot.y, 0);
     }
 
     public GameObject getGameObj()
@@ -48,7 +53,7 @@ public class Cart : MonoBehaviour, Interactable
         //rb.AddForce(new Vector3(targetVel.x, 0, targetVel.z), ForceMode.Acceleration);
         //transform.rotation = Player.instance.transform.rotation;
         //transform.rotation = Quaternion.RotateTowards(transform.rotation, Player.instance.transform.rotation, rotSpeed * Time.deltaTime);
-        rb.MoveRotation(Player.instance.transform.rotation);
+        rb.MoveRotation(/*Player.instance.transform.rotation*/Quaternion.RotateTowards(transform.rotation, Player.instance.transform.rotation, rotSpeed * Time.deltaTime));
     }
 
     public void onDrop()
