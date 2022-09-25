@@ -16,8 +16,8 @@ public class Interactor : MonoBehaviour
     [SerializeField]
     private float interactDistance = 1f;
 
-    Item pickedUpItem;
-    Item lastHighlightedItem;
+    Interactable curInteractable;
+    Interactable lastHighlightedItem;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class Interactor : MonoBehaviour
             if (lastHighlightedItem != null)
                 lastHighlightedItem.setHighlight(false);
 
-            lastHighlightedItem = hit.collider.gameObject.GetComponent<Item>();
+            lastHighlightedItem = hit.collider.gameObject.GetComponent<Interactable>();
             lastHighlightedItem.setHighlight(true);
         }
         else if (lastHighlightedItem != null)
@@ -48,31 +48,37 @@ public class Interactor : MonoBehaviour
         else if (Keyboard.current.eKey.wasReleasedThisFrame)
             letGo();
 
-        if (pickedUpItem != null && Vector3.Distance(pickedUpItem.transform.position, cameraTarget.position) >= itemHoldEpsilon)
+        if (curInteractable != null && Vector3.Distance(curInteractable.getGFXCenterPos()/*getGameObj().transform.position*/, cameraTarget.position) >= itemHoldEpsilon)
         {
             //Vector3 direction = cameraTarget.position - pickedUpItem.transform.position;
             //pickedUpItem.transform.Translate(direction.normalized * itemFollowSpeed * Time.deltaTime);
 
-            pickedUpItem.getRb().velocity = (cameraTarget.position - pickedUpItem.transform.position) * itemFollowSpeed;
+
+
+            //pickedUpItem.getRb().velocity = (cameraTarget.position - pickedUpItem.transform.position) * itemFollowSpeed;
+            curInteractable.move(cameraTarget.position, itemFollowSpeed);
+
+
+
             //pickedUpItem.transform.position = Vector3.MoveTowards(pickedUpItem.transform.position, cameraTarget.position, itemFollowSpeed * Time.deltaTime);
 
             //Debug.Log(pickedUpItem.gameObject.transform.position);
         }
     }
 
-    public Item pickUp(Vector3 origin, Vector3 direction)
+    public Interactable pickUp(Vector3 origin, Vector3 direction)
     {
         RaycastHit hit;
         if (canInteract(out hit))
         {
-            pickedUpItem = hit.collider.gameObject.GetComponent<Item>();
+            curInteractable = hit.collider.gameObject.GetComponent<Interactable>();
 
-            if (pickedUpItem == null)
-                Debug.LogError("Forgot to add Item component to " + hit.collider.gameObject.name);
+            if (curInteractable == null)
+                Debug.LogError("Forgot to add Interactable component to " + hit.collider.gameObject.name);
             else
             {
-                Debug.Log("Raycast hit: " + pickedUpItem.name);
-                pickedUpItem.onPickUp();
+                Debug.Log("Raycast hit: " + curInteractable.getName());
+                curInteractable.onPickUp();
             }
         }
         else
@@ -80,23 +86,24 @@ public class Interactor : MonoBehaviour
             Debug.Log("Raycast null");
         }
 
-        return pickedUpItem;
+        return curInteractable;
     }
 
     public void letGo()
     {        
-        if (pickedUpItem != null)
-            pickedUpItem.onDrop();
+        if (curInteractable != null)
+            curInteractable.onDrop();
 
-        pickedUpItem = null;
+        curInteractable = null;
     }
 
     public bool canInteract(out RaycastHit hit)
     {
         Vector3 origin = cameraTrans.position;
-        Vector3 direction = cameraTarget.position - cameraTrans.position;
+        Vector3 direction = cameraTrans.transform.forward;//cameraTarget.position - cameraTrans.position;        
         return Physics.Raycast(origin, direction, out hit, Mathf.Infinity, LayerMask.GetMask("Interactable", "Default", "Ground"))
+         //Physics.Raycast(Camera.main.ScreenPointToRay(Player.instance.gameObject.), out hit, Mathf.Infinity, LayerMask.GetMask("Interactable", "Default", "Ground"))
          && hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Interactable"))
-         && /*hit.distance*/Vector3.Distance(origin, hit.collider.transform.position) <= interactDistance;
+         && (Vector3.Distance(origin, hit.collider.transform.position) <= interactDistance || hit.distance <= interactDistance);
     }
 }

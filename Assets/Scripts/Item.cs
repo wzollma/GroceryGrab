@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(OutlineScript))]
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, Interactable
 {
     [SerializeField] float UIRotationSpeed;
     public Collider nonTriggerCollider;
@@ -103,6 +103,26 @@ public class Item : MonoBehaviour
     public Rigidbody getRb()
     {
         return rb;
+    }
+
+    public void move(Vector3 target, float moveSpeed)
+    {
+        getRb().velocity = (target - transform.position) * moveSpeed;
+    }
+
+    public GameObject getGameObj()
+    {
+        return gameObject;
+    }
+
+    public string getName()
+    {
+        return name;
+    }
+
+    public Vector3 getGFXCenterPos()
+    {
+        return transform.position;
     }
 
     private void OnCollisionEnter(Collision collision)
