@@ -31,5 +31,6 @@ public class CustomerManager : MonoBehaviour
     void lose()
     {
         Debug.Log("GAME OVER");
+        MenuManager.instance.lose();
     }
 }
