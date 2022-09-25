@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Pathfinding;
 
 public class Customer : MonoBehaviour
 {
     [SerializeField] private Transform UIItemHolder;    
     [SerializeField] private GameObject canvasObj;
     [SerializeField] private Image timerFillCircle;
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float moveSpeed = 6f;
     [SerializeField] private float minDistFromSection = 1.3f;
     [SerializeField] private float grabAnimTime = .5f;
     [SerializeField] private float timeBetweenRequests = 1f;
@@ -22,6 +23,7 @@ public class Customer : MonoBehaviour
     public State state;
     public List<ItemInfo> itemList;
     private ItemManager itemManager;
+    private AIDestinationSetter AIDest;
 
     private Item UIPreviewItem;
 
@@ -34,6 +36,12 @@ public class Customer : MonoBehaviour
     {
         setState(State.Spawned);
         itemManager = ItemManager.instance;
+        AIDest = GetComponent<AIDestinationSetter>();
+        if (AIDest != null)
+        {
+            GetComponent<AIPath>().maxSpeed = moveSpeed;
+            GetComponent<AIPath>().endReachedDistance = minDistFromSection;
+        }
 
         // Determine itemList
         itemList = new List<ItemInfo>();
@@ -75,7 +83,7 @@ public class Customer : MonoBehaviour
                 if (state.Equals(State.Browsing))
                     StartCoroutine(grabItem());
             }
-            else
+            else if (AIDest == null)
             {
                 Vector3 moveVec = Vector3.MoveTowards(curPos, destPos, moveSpeed * Time.deltaTime);
                 transform.position = new Vector3(moveVec.x, transform.position.y, moveVec.z);
@@ -230,6 +238,9 @@ public class Customer : MonoBehaviour
             destinationTrans = null;
 
         Debug.Log("setting state: " + newState.ToString());
+
+        if (AIDest != null)
+            AIDest.target = destinationTrans;
     }
 
     void setAngryDestinationTrans()
@@ -238,6 +249,9 @@ public class Customer : MonoBehaviour
             destinationTrans = Player.instance.transform;
         else
             destinationTrans = null;
+
+        if (AIDest != null)
+            AIDest.target = destinationTrans;
     }
 
     float get2DDistance(Vector3 pos1, Vector3 pos2)

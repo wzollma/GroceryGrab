@@ -10,10 +10,20 @@ public class OutlineScript : MonoBehaviour
     private float outlineScaleFactor;
     [SerializeField]
     private Color outlineColor;
+    [SerializeField]
+    private float startYRot;
+    [SerializeField] private Vector3 offset;
+    [SerializeField] private float scaleMult;
 
     private Renderer outlineRenderer;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        if (scaleMult == 0)
+            scaleMult = 1;
+    }
+
     void Start()
     {
         outlineRenderer = CreateOutline(outlineMaterial, outlineScaleFactor, outlineColor);        
@@ -29,12 +39,13 @@ public class OutlineScript : MonoBehaviour
     // Update is called once per frame
     Renderer CreateOutline(Material outlineMat, float scaleFactor, Color color)
     {
-        GameObject outlineObj = Instantiate(gameObject, transform.position, transform.rotation, transform);
+        Vector3 curRot = transform.rotation.eulerAngles;
+        GameObject outlineObj = Instantiate(gameObject, transform.position + offset, Quaternion.Euler(curRot.x, curRot.y + startYRot, curRot.z), transform);
         Vector3 thisScale = transform.localScale;
         Vector3 prevScale = outlineObj.transform.localScale;
         outlineObj.transform.localScale = new Vector3(prevScale.x / thisScale.x, prevScale.y / thisScale.y, prevScale.y / thisScale.z);
         Vector3 prevLossy = outlineObj.transform.localScale;
-        scaleFactor = -1 + (scaleFactor + 1) * Mathf.Max(prevLossy.x / thisScale.x, prevLossy.y / thisScale.y, prevLossy.z / thisScale.z);
+        scaleFactor = (-1 + (scaleFactor + 1) * Mathf.Max(prevLossy.x / thisScale.x, prevLossy.y / thisScale.y, prevLossy.z / thisScale.z)) * scaleMult;
         Renderer rend = outlineObj.GetComponent<Renderer>();
 
         rend.material = outlineMat;
@@ -42,7 +53,7 @@ public class OutlineScript : MonoBehaviour
         rend.material.SetFloat("_Scale", scaleFactor);
         rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 
-        Item itemObj = outlineObj.GetComponent<Item>();
+        Interactable itemObj = outlineObj.GetComponent<Interactable>();
         if (itemObj != null)
             itemObj.disableNonGFXComponents();
 

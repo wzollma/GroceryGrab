@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -4626976252235004716}
   - component: {fileID: -5322668044518743127}
   - component: {fileID: -4351604523121815399}
+  - component: {fileID: 4574105113536365096}
+  - component: {fileID: 4210094898568313821}
   m_Layer: 0
   m_Name: DR_BLUE
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 5974458169192747935}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: -14.23}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIRotationSpeed: 40
-  nonTriggerCollider: {fileID: 0}
-  triggerCollider: {fileID: 0}
+  nonTriggerCollider: {fileID: -4351604523121815399}
+  triggerCollider: {fileID: 4574105113536365096}
   itemName: 
   isRequest: 0
   destroyed: 0
@@ -132,3 +134,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.64772034, y: 2.0044026, z: 0.64772034}
   m_Center: {x: 0, y: 1.0043156, z: 0}
+--- !u!65 &4574105113536365096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974458169192747935}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.64772034, y: 2.0044026, z: 0.64772034}
+  m_Center: {x: 0, y: 1.0043156, z: 0}
+--- !u!54 &4210094898568313821
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974458169192747935}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 2
+  m_Constraints: 0
+  m_CollisionDetection: 1

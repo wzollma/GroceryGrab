@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -6479065958001303587}
   - component: {fileID: 7609933309558598592}
   - component: {fileID: 6234318278749819891}
+  - component: {fileID: 3372043755405564993}
+  - component: {fileID: 286940431532375011}
   m_Layer: 0
   m_Name: DK_POP_vBROWN
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 1222832298034960424}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 28.22, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIRotationSpeed: 40
-  nonTriggerCollider: {fileID: 0}
-  triggerCollider: {fileID: 0}
+  nonTriggerCollider: {fileID: 6234318278749819891}
+  triggerCollider: {fileID: 3372043755405564993}
   itemName: 
   isRequest: 0
   destroyed: 0
@@ -132,3 +134,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.390319, y: 5.1416283, z: 2.390319}
   m_Center: {x: 0, y: 2.5708141, z: 0}
+--- !u!65 &3372043755405564993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222832298034960424}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.390319, y: 5.1416283, z: 2.390319}
+  m_Center: {x: 0, y: 2.5708141, z: 0}
+--- !u!54 &286940431532375011
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222832298034960424}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 2
+  m_Constraints: 0
+  m_CollisionDetection: 1

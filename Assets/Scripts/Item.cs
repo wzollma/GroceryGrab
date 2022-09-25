@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+[RequireComponent(typeof(OutlineScript))]
+public class Item : MonoBehaviour, Interactable
 {
     [SerializeField] float UIRotationSpeed;
     public Collider nonTriggerCollider;
@@ -12,16 +13,16 @@ public class Item : MonoBehaviour
     public bool isRequest;
     public bool destroyed;
     private bool grabbable;
+    private bool pickedUp;
 
     private Customer grabbingCustomer;
 
-    Rigidbody rb;
+    private Rigidbody rb;
     OutlineScript outlineScript;
 
     bool isUI;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         outlineScript = GetComponent<OutlineScript>();
@@ -72,12 +73,14 @@ public class Item : MonoBehaviour
     {
         rb.useGravity = false;
         grabbable = true;
+        pickedUp = true;
     }
 
     public void onDrop()
     {
         Debug.Log("Dropped item");
         rb.useGravity = true;
+        pickedUp = false;
 
         //make so that hitting floor makes stuff not grabbable
     }
@@ -100,9 +103,34 @@ public class Item : MonoBehaviour
         grabbable = true;
     }
 
+    public Rigidbody getRb()
+    {
+        return rb;
+    }
+
+    public void move(Vector3 target, float moveSpeed)
+    {
+        getRb().velocity = (target - transform.position) * moveSpeed;
+    }
+
+    public GameObject getGameObj()
+    {
+        return gameObject;
+    }
+
+    public string getName()
+    {
+        return name;
+    }
+
+    public Vector3 getGFXCenterPos()
+    {
+        return transform.position;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (grabbable && collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")))
+        if (!pickedUp && grabbable && (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")) || collision.gameObject.GetComponent<Cart>() != null))
         {
             Debug.Log("item: " + itemName + " hitting ground");
             grabbable = false;
