@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(OutlineScript))]
 public class Item : MonoBehaviour
 {
     [SerializeField] float UIRotationSpeed;
@@ -15,13 +16,12 @@ public class Item : MonoBehaviour
 
     private Customer grabbingCustomer;
 
-    public Rigidbody rb;
+    private Rigidbody rb;
     OutlineScript outlineScript;
 
     bool isUI;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         outlineScript = GetComponent<OutlineScript>();
@@ -98,6 +98,11 @@ public class Item : MonoBehaviour
     {
         grabbingCustomer = customer;
         grabbable = true;
+    }
+
+    public Rigidbody getRb()
+    {
+        return rb;
     }
 
     private void OnCollisionEnter(Collision collision)

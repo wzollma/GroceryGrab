@@ -53,7 +53,7 @@ public class Interactor : MonoBehaviour
             //Vector3 direction = cameraTarget.position - pickedUpItem.transform.position;
             //pickedUpItem.transform.Translate(direction.normalized * itemFollowSpeed * Time.deltaTime);
 
-            pickedUpItem.rb.velocity = (cameraTarget.position - pickedUpItem.transform.position) * itemFollowSpeed;
+            pickedUpItem.getRb().velocity = (cameraTarget.position - pickedUpItem.transform.position) * itemFollowSpeed;
             //pickedUpItem.transform.position = Vector3.MoveTowards(pickedUpItem.transform.position, cameraTarget.position, itemFollowSpeed * Time.deltaTime);
 
             //Debug.Log(pickedUpItem.gameObject.transform.position);

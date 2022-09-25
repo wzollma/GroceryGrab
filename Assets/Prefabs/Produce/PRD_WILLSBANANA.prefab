@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -2765645248107499874}
   - component: {fileID: -4466699135680589691}
   - component: {fileID: 2958700950370530021}
+  - component: {fileID: 9183033290869952654}
+  - component: {fileID: 2088771835393063921}
   m_Layer: 0
   m_Name: PRD_WILLSBANANA
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 6137015514457295767}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.16, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -114,8 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIRotationSpeed: 40
-  nonTriggerCollider: {fileID: 0}
-  triggerCollider: {fileID: 0}
+  nonTriggerCollider: {fileID: 2958700950370530021}
+  triggerCollider: {fileID: 9183033290869952654}
   itemName: 
   isRequest: 0
   destroyed: 0
@@ -130,5 +132,34 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.53875005, y: 0.9347209, z: 2.5188618}
+  m_Size: {x: 0.43100008, y: 0.7178657, z: 2.418108}
   m_Center: {x: -0.011439696, y: 0.48017967, z: 0.11875731}
+--- !u!65 &9183033290869952654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6137015514457295767}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43100008, y: 0.7178657, z: 2.418108}
+  m_Center: {x: -0.011439696, y: 0.48017967, z: 0.11875731}
+--- !u!54 &2088771835393063921
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6137015514457295767}
+  serializedVersion: 2
+  m_Mass: 5
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 2
+  m_Constraints: 0
+  m_CollisionDetection: 1
