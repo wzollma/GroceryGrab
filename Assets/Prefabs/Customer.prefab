@@ -114,7 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIItemHolder: {fileID: 1508414793529574490}
-  exitTrans: {fileID: 0}
   canvasObj: {fileID: 1508414793460768180}
   timerFillCircle: {fileID: 2323760547189504691}
   moveSpeed: 5
@@ -122,6 +121,8 @@ MonoBehaviour:
   grabAnimTime: 0.5
   timeBetweenRequests: 1
   requestTimer: 8
+  aggroRange: 10
+  exitTrans: {fileID: 0}
   state: 0
   itemList: []
 --- !u!136 &1508414792907132314
@@ -364,6 +365,7 @@ GameObject:
   - component: {fileID: 2304106213111287290}
   - component: {fileID: 4311712679023157929}
   - component: {fileID: 2284035220897968383}
+  - component: {fileID: 454264181090431301}
   m_Layer: 0
   m_Name: BG
   m_TagString: Untagged
@@ -430,6 +432,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &454264181090431301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6600204019470008557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e51e1d6b9d8774543b4321e4c4c40f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7067354174765699803
 GameObject:
   m_ObjectHideFlags: 0

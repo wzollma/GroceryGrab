@@ -31,6 +31,9 @@ public class Interactor : MonoBehaviour
         RaycastHit hit;
         if (canInteract(out hit))
         {
+            if (lastHighlightedItem != null)
+                lastHighlightedItem.setHighlight(false);
+
             lastHighlightedItem = hit.collider.gameObject.GetComponent<Item>();
             lastHighlightedItem.setHighlight(true);
         }
@@ -90,6 +93,7 @@ public class Interactor : MonoBehaviour
         Vector3 origin = cameraTrans.position;
         Vector3 direction = cameraTarget.position - cameraTrans.position;
         return Physics.Raycast(origin, direction, out hit, Mathf.Infinity, LayerMask.GetMask("Interactable", "Default", "Ground"))
-         && hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Interactable")) && hit.distance <= interactDistance;
+         && hit.collider.gameObject.layer.Equals(LayerMask.NameToLayer("Interactable"))
+         && /*hit.distance*/Vector3.Distance(origin, hit.collider.transform.position) <= interactDistance;
     }
 }

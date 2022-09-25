@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class Customer : MonoBehaviour
 {
-    [SerializeField] private Transform UIItemHolder;
-    [SerializeField] private Transform exitTrans;
+    [SerializeField] private Transform UIItemHolder;    
     [SerializeField] private GameObject canvasObj;
     [SerializeField] private Image timerFillCircle;
     [SerializeField] private float moveSpeed = 1f;
@@ -14,6 +13,9 @@ public class Customer : MonoBehaviour
     [SerializeField] private float grabAnimTime = .5f;
     [SerializeField] private float timeBetweenRequests = 1f;
     [SerializeField] private float requestTimer = 8f;
+    [SerializeField] private float aggroRange = 12f;
+
+    public Transform exitTrans;
 
     public enum State { Spawned, Browsing, GrabbingItem, Waiting, Angry, Leaving }
 
@@ -36,13 +38,13 @@ public class Customer : MonoBehaviour
         // Determine itemList
         itemList = new List<ItemInfo>();
 
-        int totalItems = 20;
-        int numItemsRequests = Random.Range(3, 6);
+        int totalItems = Random.Range(6, 10);
+        int numItemsRequests = Random.Range(2, 5);
         Item[] itemArr = new Item[totalItems + numItemsRequests];
         for (int i = 0; i < totalItems - numItemsRequests; i++)
             addRandomItemInfo(0, false);
 
-        for (int i = 0; i < numItemsRequests; i++)        
+        for (int i = 0; i < numItemsRequests; i++)
             addRandomItemInfo(Random.Range(0, itemList.Count), true);
 
         withoutPreviewStartTime = timeBetweenRequests;
@@ -59,11 +61,15 @@ public class Customer : MonoBehaviour
         if (Time.time < withoutPreviewStartTime + timeBetweenRequests)
             return;
 
+        if (state.Equals(State.Angry))
+            setAngryDestinationTrans();
+
         if (destinationTrans != null && Vector2.Distance(transform.position, destinationTrans.position) > .05f)
         {
             Vector3 curPos = transform.position;
             Vector3 destPos = destinationTrans.position;
-            float dist = Vector2.Distance(new Vector2(curPos.x, curPos.z), new Vector2(destPos.x, destPos.z));
+            float dist = get2DDistance(transform.position, destinationTrans.position);
+
             if (dist <= minDistFromSection)
             {
                 if (state.Equals(State.Browsing))
@@ -205,17 +211,37 @@ public class Customer : MonoBehaviour
     {
         ItemInfo topItem = getItemInfoAtTopOfList();
 
+        if (state.Equals(State.Angry) && !newState.Equals(State.Angry))
+            CustomerManager.instance.setAngryCustomer(false);
+        else if (!state.Equals(State.Angry) && newState.Equals(State.Angry))
+            CustomerManager.instance.setAngryCustomer(true);
+
         state = newState;
 
         if (newState.Equals(State.Leaving))
             destinationTrans = exitTrans;
         else if (newState.Equals(State.Angry))
-            destinationTrans = Player.instance.transform;
+        {
+            setAngryDestinationTrans();            
+        }            
         else if (state.Equals(State.Browsing) && itemList.Count > 0 && topItem != null && !topItem.isRequest)
             destinationTrans = topItem.sectionTrans;
         else
             destinationTrans = null;
 
         Debug.Log("setting state: " + newState.ToString());
+    }
+
+    void setAngryDestinationTrans()
+    {
+        if (get2DDistance(transform.position, Player.instance.transform.position) < aggroRange)
+            destinationTrans = Player.instance.transform;
+        else
+            destinationTrans = null;
+    }
+
+    float get2DDistance(Vector3 pos1, Vector3 pos2)
+    {
+        return Vector2.Distance(new Vector2(pos1.x, pos1.z), new Vector2(pos2.x, pos2.z));
     }
 }
