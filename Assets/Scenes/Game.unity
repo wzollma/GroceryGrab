@@ -24167,7 +24167,7 @@ Transform:
   - {fileID: 1242475110}
   - {fileID: 126361185}
   m_Father: {fileID: 0}
-  m_RootOrder: 437
+  m_RootOrder: 439
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1672441529
 PrefabInstance:
@@ -32354,6 +32354,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemMananger
       objectReference: {fileID: 0}
+    - target: {fileID: 5689202164852811273, guid: 4add76225a0a61448a80a7c30a8fc74a,
+        type: 3}
+      propertyPath: allItems.Array.data[0].itemPrefab
+      value: 
+      objectReference: {fileID: -5611634768170389860, guid: 9ef2799e9c5c1f746afe0935f52d2c0c,
+        type: 3}
+    - target: {fileID: 5689202164852811273, guid: 4add76225a0a61448a80a7c30a8fc74a,
+        type: 3}
+      propertyPath: allItems.Array.data[1].itemPrefab
+      value: 
+      objectReference: {fileID: 4327351124694424291, guid: a3e4d698d1a23c24890b17d81664fdd1,
+        type: 3}
     - target: {fileID: 5689202164852811273, guid: 4add76225a0a61448a80a7c30a8fc74a,
         type: 3}
       propertyPath: allItems.Array.data[0].sectionTrans
