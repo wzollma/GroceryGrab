@@ -121,7 +121,7 @@ MonoBehaviour:
   UIRotationSpeed: 40
   nonTriggerCollider: {fileID: -350532992438012664}
   triggerCollider: {fileID: 7291860293489109529}
-  itemName: 
+  itemName: pot_chip_snack
   isRequest: 0
   destroyed: 0
 --- !u!65 &-350532992438012664

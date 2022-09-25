@@ -103,6 +103,9 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 8388d176ee2cd724a88225af955c3207, type: 2}
   outlineScaleFactor: -1.02
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
+  startYRot: 0
+  offset: {x: 0, y: 0, z: 0}
+  scaleMult: 0
 --- !u!114 &-3242149984115719957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +121,7 @@ MonoBehaviour:
   UIRotationSpeed: 40
   nonTriggerCollider: {fileID: 4750864315548613063}
   triggerCollider: {fileID: -2863095222902098106}
-  itemName: 
+  itemName: potato_can
   isRequest: 0
   destroyed: 0
 --- !u!65 &4750864315548613063

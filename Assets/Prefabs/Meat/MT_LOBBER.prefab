@@ -121,7 +121,7 @@ MonoBehaviour:
   UIRotationSpeed: 40
   nonTriggerCollider: {fileID: 2197278611459219476}
   triggerCollider: {fileID: -5868916714150530529}
-  itemName: 
+  itemName: lob_meat
   isRequest: 0
   destroyed: 0
 --- !u!65 &2197278611459219476
