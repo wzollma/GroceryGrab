@@ -13,6 +13,7 @@ public class Item : MonoBehaviour, Interactable
     public bool isRequest;
     public bool destroyed;
     private bool grabbable;
+    private bool pickedUp;
 
     private Customer grabbingCustomer;
 
@@ -72,12 +73,14 @@ public class Item : MonoBehaviour, Interactable
     {
         rb.useGravity = false;
         grabbable = true;
+        pickedUp = true;
     }
 
     public void onDrop()
     {
         Debug.Log("Dropped item");
         rb.useGravity = true;
+        pickedUp = false;
 
         //make so that hitting floor makes stuff not grabbable
     }
@@ -127,7 +130,7 @@ public class Item : MonoBehaviour, Interactable
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (grabbable && collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")))
+        if (!pickedUp && grabbable && (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")) || collision.gameObject.GetComponent<Cart>() != null))
         {
             Debug.Log("item: " + itemName + " hitting ground");
             grabbable = false;

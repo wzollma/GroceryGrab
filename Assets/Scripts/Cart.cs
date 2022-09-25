@@ -12,12 +12,22 @@ public class Cart : MonoBehaviour, Interactable
     OutlineScript outlineScript;
     Collider[] colliders;
     Rigidbody rb;
+    private float startY;
 
     public void Awake()
     {
         outlineScript = GetComponent<OutlineScript>();
         colliders = GetComponents<Collider>();
         rb = GetComponent<Rigidbody>();
+        startY = transform.position.y;
+    }
+
+    private void Update()
+    {
+        Vector3 prevPos = transform.position;
+
+        if (prevPos.y != startY)
+            transform.position = new Vector3(prevPos.x, startY, prevPos.z);
     }
 
     public GameObject getGameObj()
