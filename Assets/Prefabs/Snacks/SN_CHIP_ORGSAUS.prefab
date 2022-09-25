@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7891347295259830321}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.7, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +103,9 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 8388d176ee2cd724a88225af955c3207, type: 2}
   outlineScaleFactor: -1.02
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
+  startYRot: 0
+  offset: {x: 0, y: 0, z: 0}
+  scaleMult: 0
 --- !u!114 &-4364627001498477689
 MonoBehaviour:
   m_ObjectHideFlags: 0
