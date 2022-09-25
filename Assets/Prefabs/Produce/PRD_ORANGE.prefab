@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7012053370802656734}
   - component: {fileID: -3203051776909948832}
   - component: {fileID: 4927958674682597083}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PRD_ORANGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

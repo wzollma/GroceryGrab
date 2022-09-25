@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -350532992438012664}
   - component: {fileID: 7291860293489109529}
   - component: {fileID: 5026569699677071281}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CHIP_POTATO
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1821904827249257654}
   - component: {fileID: 4162264561385856077}
   - component: {fileID: 8843732539081289140}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CER_HRDBREAD
   m_TagString: Untagged
   m_Icon: {fileID: 0}

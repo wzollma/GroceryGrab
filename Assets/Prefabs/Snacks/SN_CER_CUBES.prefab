@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 583430285866203503}
   - component: {fileID: 2109836806909676443}
   - component: {fileID: 9061546166328398241}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CER_CUBES
   m_TagString: Untagged
   m_Icon: {fileID: 0}

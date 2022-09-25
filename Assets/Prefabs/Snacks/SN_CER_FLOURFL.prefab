@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1875243550118095657}
   - component: {fileID: 3086621851048781527}
   - component: {fileID: 6179136405593267219}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CER_FLOURFL
   m_TagString: Untagged
   m_Icon: {fileID: 0}

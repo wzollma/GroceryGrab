@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8004067345259119539}
   - component: {fileID: -5910819897196187497}
   - component: {fileID: 539980307453142316}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CHIP_PICKLES
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8135604337317258501}
   - component: {fileID: 3295795315126520014}
   - component: {fileID: 2971782800556259750}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DR_BADBUT
   m_TagString: Untagged
   m_Icon: {fileID: 0}

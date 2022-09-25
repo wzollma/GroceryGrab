@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8887710291611650151}
   - component: {fileID: -6994559763888722024}
   - component: {fileID: 3162795858159030609}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DK_POP_GOOD
   m_TagString: Untagged
   m_Icon: {fileID: 0}

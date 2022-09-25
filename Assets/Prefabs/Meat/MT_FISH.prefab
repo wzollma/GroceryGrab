@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4585147908957504196}
   - component: {fileID: -2319136053750271005}
   - component: {fileID: 2050658166986097397}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MT_FISH
   m_TagString: Untagged
   m_Icon: {fileID: 0}

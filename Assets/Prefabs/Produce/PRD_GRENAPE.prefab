@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4126340931765230018}
   - component: {fileID: 6348648920332354181}
   - component: {fileID: 6942198166084197432}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PRD_GRENAPE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

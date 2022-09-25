@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2958700950370530021}
   - component: {fileID: 9183033290869952654}
   - component: {fileID: 2088771835393063921}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PRD_WILLSBANANA
   m_TagString: Untagged
   m_Icon: {fileID: 0}

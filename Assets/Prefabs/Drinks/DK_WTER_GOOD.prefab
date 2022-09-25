@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8041142770063090627}
   - component: {fileID: -5122961809880565029}
   - component: {fileID: 7537581225396635744}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DK_WTER_GOOD
   m_TagString: Untagged
   m_Icon: {fileID: 0}

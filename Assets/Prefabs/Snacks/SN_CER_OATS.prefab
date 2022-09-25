@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 139040698788938604}
   - component: {fileID: 8814131706644779437}
   - component: {fileID: 2189244313971318405}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CER_OATS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

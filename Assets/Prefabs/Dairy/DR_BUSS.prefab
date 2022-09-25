@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7652722150666816591}
   - component: {fileID: 3800281947564838445}
   - component: {fileID: 8385463710923534573}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DR_BUSS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2838847352601375723}
   - component: {fileID: 2113306614103658011}
   - component: {fileID: 5994728045510524337}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CHIP_ORGSAUS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
