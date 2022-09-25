@@ -646,9 +646,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7433306248756754631}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 361619550725737572}
@@ -657,7 +657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.15, y: 2.596}
+  m_AnchoredPosition: {x: 6.1499996, y: 2.5959997}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4667037605617532262
@@ -2046,8 +2046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIItemHolder: {fileID: 7904171637328432527}
   canvasObj: {fileID: 8155702618962913634}
-  timerFillCircle: {fileID: 6061692237844259471, guid: e41782bdd5fa3544299e629791047606,
-    type: 3}
+  timerFillCircle: {fileID: 8475423579524532930}
   angryObj: {fileID: 3224187152882913784}
   positionPos: {fileID: 1974640933862578288}
   moveSpeed: 5
