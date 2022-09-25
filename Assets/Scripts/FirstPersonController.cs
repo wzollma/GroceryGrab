@@ -154,7 +154,11 @@ namespace StarterAssets
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			bool isSprinting = _input.sprint && Player.instance.canSprint();
+			float targetSpeed = isSprinting ? SprintSpeed : MoveSpeed;
+				
+			Player.instance.setIsSprinting(isSprinting);
+			Player.instance.setIsSprintKeyDown(_input.sprint);
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -263,6 +267,11 @@ namespace StarterAssets
 
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+
+		public bool isSprinting()
+		{
+			return GetComponent<StarterAssetsInputs>().sprint;
 		}
 	}
 }

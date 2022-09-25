@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1508414792907131494}
   - component: {fileID: 1508414792907131495}
   - component: {fileID: 1508414792907132314}
-  - component: {fileID: -7282468460870642161}
   m_Layer: 0
   m_Name: Customer
   m_TagString: Untagged
@@ -115,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIItemHolder: {fileID: 1508414793529574490}
+  exitTrans: {fileID: 0}
   canvasObj: {fileID: 1508414793460768180}
   timerFillCircle: {fileID: 2323760547189504691}
   moveSpeed: 5
@@ -138,18 +138,6 @@ CapsuleCollider:
   m_Height: 2.2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7282468460870642161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508414792907131488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dcea9f08aaa08242ace7b4c2e1af0a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1508414793460768180
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b74c31d447d2f5d41a61081bdf5e7126, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6139d9a429afa17418b2754592c5de27, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -508,7 +496,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b74c31d447d2f5d41a61081bdf5e7126, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6139d9a429afa17418b2754592c5de27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
