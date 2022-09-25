@@ -1,14 +1,30 @@
 fileFormatVersion: 2
-guid: 3faea3e02e821794b9a8ca9636f6afcc
+guid: 0b3ed614e47de5740bc4be364eb929ba
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: GROCERY_ATLAS
-    second: {fileID: 2100000, guid: a83b2fcfa822cd5469bfad72ca609973, type: 2}
+      74: -7507391264446131446
+    second: rig|DIAGLOGUE
+  - first:
+      74: 8528082389581597290
+    second: rig|WALK2
+  - first:
+      74: -2088922441438276052
+    second: rig|WALK_1
+  - first:
+      74: -4854983312044680517
+    second: rig|WALK_1.001
+  - first:
+      74: -1938195878825702002
+    second: rig|WALK_1.002
+  - first:
+      74: -1065993014118335401
+    second: rig|WALK_CYCLE
+  - first:
+      74: -2068209271098687813
+    second: MAN_EYES1|WALK_CYCLE
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
