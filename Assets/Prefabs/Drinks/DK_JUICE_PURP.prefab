@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1947331664283936748}
   - component: {fileID: 4735616400999118270}
   - component: {fileID: 1546064815729117270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DK_JUICE_PURP
   m_TagString: Untagged
   m_Icon: {fileID: 0}

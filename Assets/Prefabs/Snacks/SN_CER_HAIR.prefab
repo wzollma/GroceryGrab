@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7336699694462844478}
   - component: {fileID: 1318822148832708618}
   - component: {fileID: 2218431433443159089}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SN_CER_HAIR
   m_TagString: Untagged
   m_Icon: {fileID: 0}

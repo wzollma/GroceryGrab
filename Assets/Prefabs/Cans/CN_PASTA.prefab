@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5981529712094427934}
   - component: {fileID: 6080362912227337899}
   - component: {fileID: 7679977539287102674}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CN_PASTA
   m_TagString: Untagged
   m_Icon: {fileID: 0}

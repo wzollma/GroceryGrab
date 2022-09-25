@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2981475289931450683}
   - component: {fileID: 5029520986871524909}
   - component: {fileID: 8306209180402141753}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CN_ROCKS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

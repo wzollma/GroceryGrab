@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -259218860793702047}
   - component: {fileID: 6874910272614061143}
   - component: {fileID: 8119315252061227130}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DK_POP_GREEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}

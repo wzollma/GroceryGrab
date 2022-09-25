@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3912109057589659328}
   - component: {fileID: -2065054439910915222}
   - component: {fileID: 4961533174983507120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PRD_HUGE_BEAN
   m_TagString: Untagged
   m_Icon: {fileID: 0}

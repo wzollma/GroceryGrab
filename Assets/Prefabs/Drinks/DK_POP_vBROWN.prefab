@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6234318278749819891}
   - component: {fileID: 3372043755405564993}
   - component: {fileID: 286940431532375011}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DK_POP_vBROWN
   m_TagString: Untagged
   m_Icon: {fileID: 0}

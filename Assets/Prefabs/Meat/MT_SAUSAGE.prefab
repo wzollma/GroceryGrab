@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7929282917564021747}
   - component: {fileID: 7458748739212598154}
   - component: {fileID: 7825921361827834899}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MT_SAUSAGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}

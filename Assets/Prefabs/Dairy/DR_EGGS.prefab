@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1240051143923293438}
   - component: {fileID: -2624071607574659882}
   - component: {fileID: 6477132313136269662}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DR_EGGS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2197278611459219476}
   - component: {fileID: -5868916714150530529}
   - component: {fileID: 2443405107940713057}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MT_LOBBER
   m_TagString: Untagged
   m_Icon: {fileID: 0}

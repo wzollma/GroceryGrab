@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1505469993856868802}
   - component: {fileID: 1968021354803741362}
   - component: {fileID: 6946179838451539882}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MEAT_COOLER
   m_TagString: Untagged
   m_Icon: {fileID: 0}

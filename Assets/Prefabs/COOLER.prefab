@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8733053048133935159}
   - component: {fileID: 9191951299179521547}
   - component: {fileID: 9222320261825206301}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: COOLER
   m_TagString: Untagged
   m_Icon: {fileID: 0}

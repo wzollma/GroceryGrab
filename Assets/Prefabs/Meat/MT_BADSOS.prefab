@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1416214860047239320}
   - component: {fileID: 7280026771983822621}
   - component: {fileID: 1005447714971900020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: MT_BADSOS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4842107183798679639}
   - component: {fileID: -7057154434966142189}
   - component: {fileID: 3420858904063061857}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DK_JUICE_ORANGES
   m_TagString: Untagged
   m_Icon: {fileID: 0}

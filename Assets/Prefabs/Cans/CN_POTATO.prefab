@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4750864315548613063}
   - component: {fileID: -2863095222902098106}
   - component: {fileID: 649685078002707416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CN_POTATO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
