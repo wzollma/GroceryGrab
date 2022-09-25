@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIRotationSpeed: 40
-  nonTriggerCollider: {fileID: 0}
-  triggerCollider: {fileID: 0}
+  nonTriggerCollider: {fileID: -3951691250196454061}
+  triggerCollider: {fileID: -6021260358619559588}
   itemName: gmeat_meat
   isRequest: 0
   destroyed: 0
