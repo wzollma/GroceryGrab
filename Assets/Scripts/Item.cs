@@ -15,7 +15,7 @@ public class Item : MonoBehaviour
 
     private Customer grabbingCustomer;
 
-    Rigidbody rb;
+    public Rigidbody rb;
     OutlineScript outlineScript;
 
     bool isUI;

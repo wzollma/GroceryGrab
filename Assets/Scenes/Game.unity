@@ -2673,8 +2673,9 @@ MonoBehaviour:
   cameraTrans: {fileID: 443891775}
   cameraTarget: {fileID: 895463746}
   itemFollowSpeed: 10
-  itemHoldEpsilon: 0.1
+  itemHoldEpsilon: 0.01
   interactDistance: 3
+  velocityModifier: 10
 --- !u!1 &1689077070
 GameObject:
   m_ObjectHideFlags: 0
