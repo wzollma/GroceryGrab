@@ -17,6 +17,7 @@ public class Customer : MonoBehaviour
     [SerializeField] private float timeBetweenRequests = 1f;
     [SerializeField] private float requestTimer = 8f;
     [SerializeField] private float aggroRange = 12f;
+    private Animator anim;
 
     public Transform exitTrans;
 
@@ -36,6 +37,7 @@ public class Customer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         setState(State.Spawned);
         itemManager = ItemManager.instance;
         AIDest = GetComponent<AIDestinationSetter>();
@@ -49,7 +51,7 @@ public class Customer : MonoBehaviour
         itemList = new List<ItemInfo>();
 
         int totalItems = Random.Range(6, 10);
-        int numItemsRequests = 0;// Random.Range(2, 5);
+        int numItemsRequests = Random.Range(2, 5);
         Item[] itemArr = new Item[totalItems + numItemsRequests];
         for (int i = 0; i < totalItems - numItemsRequests; i++)
             addRandomItemInfo(0, false);
@@ -243,6 +245,12 @@ public class Customer : MonoBehaviour
             destinationTrans = null;
 
         Debug.Log("setting state: " + newState.ToString());
+
+        if (anim != null)
+        {
+            anim.SetBool("DIALOGUE", state.Equals(State.Browsing) && topItem != null && topItem.isRequest);
+            anim.SetBool("ANGRY", state.Equals(State.Angry));
+        }
 
         if (AIDest != null)
             AIDest.target = destinationTrans;

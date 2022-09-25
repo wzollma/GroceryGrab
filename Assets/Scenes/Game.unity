@@ -28162,6 +28162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Customer (A_)
       objectReference: {fileID: 0}
+    - target: {fileID: 6061692236879636999, guid: e41782bdd5fa3544299e629791047606,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6061692236879637007, guid: e41782bdd5fa3544299e629791047606,
         type: 3}
       propertyPath: m_RootOrder
@@ -32624,6 +32629,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7521036851732949627, guid: ca28a2bb73505bb4eb6f5929783573f3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7521036851732949627, guid: ca28a2bb73505bb4eb6f5929783573f3,
+        type: 3}
+      propertyPath: customerPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6413567760874641531, guid: 8982a4a99edeaeb4e8151c34e94884c4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca28a2bb73505bb4eb6f5929783573f3, type: 3}
 --- !u!4 &9005220659918061532 stripped
