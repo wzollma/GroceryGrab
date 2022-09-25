@@ -2083,7 +2083,7 @@ MonoBehaviour:
     m_Bits: 513
   centerOffsetCompatibility: NaN
   orientation: 0
-  enableRotation: 0
+  enableRotation: 1
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
