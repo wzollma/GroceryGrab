@@ -121,7 +121,7 @@ MonoBehaviour:
   UIRotationSpeed: 40
   nonTriggerCollider: {fileID: -4351604523121815399}
   triggerCollider: {fileID: 4574105113536365096}
-  itemName: 
+  itemName: blumilk_dairy
   isRequest: 0
   destroyed: 0
 --- !u!65 &-4351604523121815399
