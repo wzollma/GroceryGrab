@@ -121,7 +121,7 @@ MonoBehaviour:
   UIRotationSpeed: 40
   nonTriggerCollider: {fileID: 1240051143923293438}
   triggerCollider: {fileID: -2624071607574659882}
-  itemName: 
+  itemName: eggs_dairy
   isRequest: 0
   destroyed: 0
 --- !u!65 &1240051143923293438

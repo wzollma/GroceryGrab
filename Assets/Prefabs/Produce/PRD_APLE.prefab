@@ -103,6 +103,9 @@ MonoBehaviour:
   outlineMaterial: {fileID: 2100000, guid: 8388d176ee2cd724a88225af955c3207, type: 2}
   outlineScaleFactor: -1.02
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
+  startYRot: 0
+  offset: {x: 0, y: 0, z: 0}
+  scaleMult: 0
 --- !u!114 &-1384075149763433172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +121,7 @@ MonoBehaviour:
   UIRotationSpeed: 40
   nonTriggerCollider: {fileID: -5745417487567896400}
   triggerCollider: {fileID: -8795629159508649484}
-  itemName: 
+  itemName: rdapp_fruit
   isRequest: 0
   destroyed: 0
 --- !u!135 &-5745417487567896400
