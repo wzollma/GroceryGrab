@@ -28478,7 +28478,7 @@ PrefabInstance:
     - target: {fileID: 9061386797082974202, guid: a3e4d698d1a23c24890b17d81664fdd1,
         type: 3}
       propertyPath: m_Name
-      value: CN_PASTA (17)
+      value: CN_PASTA (17)adsfas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3e4d698d1a23c24890b17d81664fdd1, type: 3}
