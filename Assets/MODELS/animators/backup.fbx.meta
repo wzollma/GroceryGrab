@@ -1,0 +1,641 @@
+fileFormatVersion: 2
+guid: 6b6665f9a182a6642b740e19af19ae74
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -7507391264446131446
+    second: rig|DIAGLOGUE
+  - first:
+      74: 8528082389581597290
+    second: rig|WALK2
+  - first:
+      74: -2088922441438276052
+    second: rig|WALK_1
+  - first:
+      74: -4854983312044680517
+    second: rig|WALK_1.001
+  - first:
+      74: -1938195878825702002
+    second: rig|WALK_1.002
+  - first:
+      74: -1065993014118335401
+    second: rig|WALK_CYCLE
+  - first:
+      74: -2068209271098687813
+    second: MAN_EYES1|WALK_CYCLE
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GROCERY_ATLAS
+    second: {fileID: 2100000, guid: 42bec861f57905642bf1e2678d487d0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye
+    second: {fileID: 2100000, guid: 6c9b71a9b2b8cde4f8deaaacca49adea, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'rig|DIAGLOGUE' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'ORG-thigh.L' has scale animation that will
+      be discarded.\n\t'ORG-shin.L' has scale animation that will be discarded.\n\t'ORG-foot.L'
+      has scale animation that will be discarded.\n\t'ORG-thigh.R' has scale animation
+      that will be discarded.\n\t'ORG-foot.R' has scale animation that will be discarded.\n\t'MCH-spine.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'MCH-spine.003'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ORG-upper_arm.L'
+      has scale animation that will be discarded.\n\t'ORG-forearm.L' has scale animation
+      that will be discarded.\n\t'ORG-hand.L' has scale animation that will be discarded.\n\t'ORG-upper_arm.R'
+      has scale animation that will be discarded.\n\t'ORG-hand.R' has scale animation
+      that will be discarded.\n\nClip 'rig|WALK2' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'ORG-upper_arm.R' has scale animation that
+      will be discarded.\n\t'ORG-forearm.R' has scale animation that will be discarded.\n\t'ORG-hand.R'
+      has scale animation that will be discarded.\n\nClip 'rig|WALK_CYCLE' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'MCH-spine.001' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'MCH-spine'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ORG-thigh.L'
+      has scale animation that will be discarded.\n\t'ORG-shin.L' has scale animation
+      that will be discarded.\n\t'ORG-foot.L' has scale animation that will be discarded.\n\t'ORG-thigh.R'
+      has scale animation that will be discarded.\n\t'ORG-shin.R' has scale animation
+      that will be discarded.\n\t'ORG-foot.R' has scale animation that will be discarded.\n\t'MCH-spine.002'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'MCH-spine.003'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ORG-upper_arm.L'
+      has scale animation that will be discarded.\n\t'ORG-hand.L' has scale animation
+      that will be discarded.\n\t'ORG-upper_arm.R' has scale animation that will
+      be discarded.\n\t'ORG-forearm.R' has scale animation that will be discarded.\n\t'ORG-hand.R'
+      has scale animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: rig|DIAGLOGUE
+      takeName: rig|DIAGLOGUE
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rig|WALK_CYCLE
+      takeName: rig|WALK_CYCLE
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: torso
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-thigh.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-shin.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-foot.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine_fk.002
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine_fk.003
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-spine.004
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-spine.005
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-shoulder.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-shoulder.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-upper_arm.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-upper_arm.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-forearm.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-forearm.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-hand.L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-hand.R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-toe.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-spine.006
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-thigh.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-shin.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-foot.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ORG-toe.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: white_MAN_TEST(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MAN_COOL3_blue
+      parentName: white_MAN_TEST(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -3.7493994e-33}
+      scale: {x: 0.1737429, y: 0.1737429, z: 0.1737429}
+    - name: MAN_EYES1
+      parentName: white_MAN_TEST(Clone)
+      position: {x: -0.000000007450581, y: 0, z: 0}
+      rotation: {x: -4.8108543e-17, y: 0.9807815, z: 4.8108543e-17, w: -0.19510937}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rig
+      parentName: white_MAN_TEST(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 5.302452e-33, z: 5.302451e-33, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: MCH-torso.parent
+      parentName: rig
+      position: {x: -0, y: 0.0007300462, z: 0.021852983}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: torso
+      parentName: MCH-torso.parent
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MCH-spine.001
+      parentName: torso
+      position: {x: -0, y: -0.00072197913, z: 0.004220958}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine_fk.001
+      parentName: MCH-spine.001
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.7493176, y: 0, z: 0, w: 0.6622108}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: MCH-spine
+      parentName: spine_fk.001
+      position: {x: -0, y: -0.002755557, z: -1.4901161e-10}
+      rotation: {x: -0.74931777, y: 0, z: -0, w: 0.6622107}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: spine_fk
+      parentName: MCH-spine
+      position: {x: -0, y: 1.3517251e-10, z: 1.0337628e-10}
+      rotation: {x: 0.79045564, y: 0, z: 0, w: 0.6125193}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: tweak_spine
+      parentName: spine_fk
+      position: {x: -0, y: -0.0030698106, z: -2.9802322e-10}
+      rotation: {x: 0.000000040978193, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ORG-spine
+      parentName: tweak_spine
+      position: {x: -0, y: 2.0489097e-10, z: 5.2154064e-10}
+      rotation: {x: -0.000000040978193, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ORG-pelvis.L
+      parentName: ORG-spine
+      position: {x: -0.00008878139, y: -0.000239001, z: 0.00019992172}
+      rotation: {x: -0.21100461, y: 0.75970167, z: 0.35657585, w: 0.5011827}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: ORG-pelvis.R
+      parentName: ORG-spine
+      position: {x: 0.00008878139, y: -0.000239001, z: 0.00019992172}
+      rotation: {x: -0.21100461, y: -0.75970167, z: -0.35657585, w: 0.5011827}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: ORG-thigh.L
+      parentName: ORG-spine
+      position: {x: -0.0022213385, y: 0.00032263793, z: 0.0004655985}
+      rotation: {x: 0.95354486, y: -0.05028075, z: 0.22883868, w: 0.18935943}
+      scale: {x: 0.99999976, y: 1.0000001, z: 1.0000001}
+    - name: ORG-shin.L
+      parentName: ORG-thigh.L
+      position: {x: -1.0244548e-10, y: 0.008782233, z: -7.4505804e-11}
+      rotation: {x: 0.13192324, y: -0.00000014844639, z: -0.000000015972079, w: 0.99125993}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: ORG-foot.L
+      parentName: ORG-shin.L
+      position: {x: 3.7252902e-11, y: 0.0102621205, z: -2.4214386e-10}
+      rotation: {x: -0.5920479, y: -0.11828206, z: -0.1412928, w: 0.784554}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: ORG-heel.02.L
+      parentName: ORG-foot.L
+      position: {x: 0.0004609758, y: 0.0008037379, z: 0.0014194093}
+      rotation: {x: 0.359785, y: -0.42292294, z: 0.5666808, w: 0.60873955}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.9999999}
+    - name: ORG-toe.L
+      parentName: ORG-foot.L
+      position: {x: -0.0000000010231099, y: 0.0033267247, z: -0.00000000115484}
+      rotation: {x: 0.052598312, y: 0.9790642, z: -0.1963559, w: 0.010539746}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999996}
+    - name: ORG-thigh.R
+      parentName: ORG-spine
+      position: {x: 0.002221339, y: 0.00032264032, z: 0.00046559784}
+      rotation: {x: 0.9626162, y: 0.056182496, z: -0.23284727, w: 0.12647428}
+      scale: {x: 1.0033296, y: 1.0033295, z: 1.0033298}
+    - name: ORG-shin.R
+      parentName: ORG-thigh.R
+      position: {x: 2.2351741e-10, y: 0.008782235, z: -2.9802322e-10}
+      rotation: {x: 0.09761183, y: 0.00000014651825, z: 0.000000021533031, w: 0.9952246}
+      scale: {x: 0.99954367, y: 0.99954355, z: 0.9995435}
+    - name: ORG-foot.R
+      parentName: ORG-shin.R
+      position: {x: -3.72529e-10, y: 0.010262125, z: -2.2351741e-10}
+      rotation: {x: -0.6142493, y: 0.11154027, z: 0.1553957, w: 0.7655774}
+      scale: {x: 0.99713653, y: 0.99713653, z: 0.99713695}
+    - name: ORG-heel.02.R
+      parentName: ORG-foot.R
+      position: {x: -0.00046097583, y: 0.00080373784, z: 0.0014194093}
+      rotation: {x: 0.5666807, y: 0.6087396, z: 0.35978493, w: -0.422923}
+      scale: {x: 0.9999998, y: 0.99999964, z: 0.99999994}
+    - name: ORG-toe.R
+      parentName: ORG-foot.R
+      position: {x: 0.00000059591935, y: 0.0033279746, z: 0.0000041691164}
+      rotation: {x: -0.052598312, y: 0.9790642, z: -0.1963559, w: -0.010539746}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.9999996}
+    - name: tweak_spine.001
+      parentName: spine_fk
+      position: {x: -0, y: 2.5145708e-10, z: -1.862645e-10}
+      rotation: {x: -0.06447647, y: 0, z: -0, w: 0.99791926}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ORG-spine.001
+      parentName: tweak_spine.001
+      position: {x: -0, y: -0.0000000034924597, z: 2.6077032e-10}
+      rotation: {x: -0.000000059604645, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MCH-spine.002
+      parentName: torso
+      position: {x: -0, y: -0.00072197913, z: 0.004220958}
+      rotation: {x: 0.041185338, y: 0.009417464, z: -0.010847449, w: 0.9990483}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: spine_fk.002
+      parentName: MCH-spine.002
+      position: {x: 1.7462297e-11, y: 8.9639796e-11, z: -0.000000002699744}
+      rotation: {x: 0.69576836, y: -1.6207824e-10, z: -2.0259783e-10, w: 0.71826625}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: MCH-pivot
+      parentName: spine_fk.002
+      position: {x: -2.2682554e-11, y: -0.000000001769289, z: 1.8280825e-10}
+      rotation: {x: 0.056910094, y: 0.0056346185, z: 0.004456964, w: 0.9983535}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: tweak_spine.002
+      parentName: MCH-pivot
+      position: {x: -1.5965036e-12, y: -2.693723e-10, z: 1.2691816e-10}
+      rotation: {x: -0.07746411, y: -2.1893666e-11, z: -1.1311724e-10, w: 0.99699515}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: ORG-spine.002
+      parentName: tweak_spine.002
+      position: {x: -1.6055954e-12, y: 2.0672455e-10, z: -5.4695797e-11}
+      rotation: {x: 0.000000018599168, y: 9.276846e-11, z: -3.583409e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MCH-spine.003
+      parentName: spine_fk.002
+      position: {x: -2.7648639e-11, y: 0.0034866247, z: 2.8157957e-10}
+      rotation: {x: -0.6655242, y: -0.0007830219, z: -0.014343752, w: 0.74623805}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: spine_fk.003
+      parentName: MCH-spine.003
+      position: {x: -7.683411e-11, y: 4.7759385e-10, z: 0.0000000010505027}
+      rotation: {x: 0.7131191, y: -0.00000008402645, z: -0.00000008485676, w: 0.70104295}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: ORG-spine.004
+      parentName: spine_fk.003
+      position: {x: -2.561137e-11, y: 0.0038505408, z: -5.797483e-10}
+      rotation: {x: 0.13864689, y: 0.012483665, z: 0.0071073715, w: 0.9902377}
+      scale: {x: 0.99999875, y: 1.0000024, z: 0.99999887}
+    - name: ORG-spine.005
+      parentName: ORG-spine.004
+      position: {x: -2.561137e-11, y: 0.00081345905, z: 0.0000000013428507}
+      rotation: {x: -0.09485744, y: 0.000000026779825, z: -0.00000007425861, w: 0.9954909}
+      scale: {x: 1.000002, y: 0.999997, z: 1.0000015}
+    - name: ORG-spine.006
+      parentName: ORG-spine.005
+      position: {x: -9.778887e-11, y: 0.00077089114, z: -7.514609e-10}
+      rotation: {x: -0.13462709, y: 0.011682328, z: 0.008359536, w: 0.9907922}
+      scale: {x: 0.9999989, y: 1.0000005, z: 0.9999992}
+    - name: tweak_spine.003
+      parentName: spine_fk.003
+      position: {x: 4.6566126e-11, y: -0.0000000014017859, z: -1.1379597e-10}
+      rotation: {x: -0.0000000117288455, y: -5.551115e-17, z: -4.656613e-10, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: ORG-spine.003
+      parentName: tweak_spine.003
+      position: {x: 1.2107193e-10, y: -0.0000000014041143, z: -1.1379597e-10}
+      rotation: {x: -0.0000000042782635, y: 1.1641521e-10, z: -0.0000000016298146,
+        w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: ORG-breast.L
+      parentName: ORG-spine.003
+      position: {x: -0.0019140622, y: 0.0005067206, z: -0.0009823467}
+      rotation: {x: 0.0000001331696, y: 0.7131192, z: 0.7010429, w: -0.000000055811803}
+      scale: {x: 1, y: 0.99999976, z: 0.9999998}
+    - name: ORG-breast.R
+      parentName: ORG-spine.003
+      position: {x: 0.0019140618, y: 0.0005067217, z: -0.0009823475}
+      rotation: {x: 0.0000001331696, y: 0.7131192, z: 0.7010429, w: -0.000000055811803}
+      scale: {x: 1, y: 0.99999976, z: 0.9999998}
+    - name: ORG-shoulder.L
+      parentName: ORG-spine.003
+      position: {x: -0.00036905613, y: 0.002836465, z: 0.0014501805}
+      rotation: {x: -0.57555175, y: 0.4211934, z: 0.41428697, w: 0.56542253}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.99999976}
+    - name: ORG-upper_arm.L
+      parentName: ORG-shoulder.L
+      position: {x: 0.000046206114, y: 0.0036869938, z: -0.00035343107}
+      rotation: {x: -0.11860351, y: 0.8618824, z: -0.14804646, w: -0.4702918}
+      scale: {x: 0.9598547, y: 0.95985514, z: 0.95985496}
+    - name: ORG-forearm.L
+      parentName: ORG-upper_arm.L
+      position: {x: -4.4703483e-10, y: 0.004990397, z: 8.1956386e-10}
+      rotation: {x: -0.052864492, y: -0.13793656, z: 0.029074606, w: 0.98860174}
+      scale: {x: 1.002201, y: 1.0022012, z: 1.0022008}
+    - name: ORG-hand.L
+      parentName: ORG-forearm.L
+      position: {x: 8.9406965e-10, y: 0.005374103, z: -5.2154064e-10}
+      rotation: {x: 0.100793436, y: 0.43722427, z: -0.048715655, w: 0.8923578}
+      scale: {x: 1.0395366, y: 1.039536, z: 1.0395367}
+    - name: ORG-shoulder.R
+      parentName: ORG-spine.003
+      position: {x: 0.00036905694, y: 0.002836464, z: 0.0014501797}
+      rotation: {x: -0.5755519, y: -0.42119324, z: -0.4142871, w: 0.56542236}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: ORG-upper_arm.R
+      parentName: ORG-shoulder.R
+      position: {x: -0.00004620835, y: 0.003686991, z: -0.0003534335}
+      rotation: {x: 0.13223714, y: 0.9428617, z: -0.043209076, w: 0.30275127}
+      scale: {x: 0.95251536, y: 0.95251584, z: 0.95251596}
+    - name: ORG-forearm.R
+      parentName: ORG-upper_arm.R
+      position: {x: 6.1467287e-10, y: 0.0049903966, z: -0.0000000013504177}
+      rotation: {x: 0.05184936, y: 0.00000008940696, z: -0.00000008195638, w: 0.99865496}
+      scale: {x: 1.0018611, y: 1.0018609, z: 1.0018612}
+    - name: ORG-hand.R
+      parentName: ORG-forearm.R
+      position: {x: 7.45058e-10, y: 0.005374093, z: -1.4901161e-10}
+      rotation: {x: -0.026404405, y: -0.0563648, z: 0.08574725, w: 0.99437076}
+      scale: {x: 1.0479017, y: 1.0479012, z: 1.0479012}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
