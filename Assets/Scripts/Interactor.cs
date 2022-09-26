@@ -27,6 +27,16 @@ public class Interactor : MonoBehaviour
         //GetComponent
     }
 
+    public Interactable getCurInteractable()
+    {
+        return curInteractable;
+    }
+
+    public void setHolding(bool hold)
+    {
+        holding = hold;
+    }
+
     // Update is called once per frame
     void Update()
     {
