@@ -12,6 +12,7 @@ public class ItemManager : MonoBehaviour
     {
         if (instance != null)
         {
+            Debug.Log("destroying itemManager");
             Destroy(gameObject);
             return;
         }

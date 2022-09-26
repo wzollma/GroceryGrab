@@ -16,13 +16,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float FADE_TIME = 4f;
     [SerializeField] AudioSource walkSound;
     [SerializeField] AudioSource runSound;
+    [SerializeField] AudioSource mainMenuTrack;
 
     AudioSource curMoveSound;
 
     float targetVolume;
-    int curTheme;
+    int curTheme = - 1;
 
-    float lastTimeThemeFadeStart;
+    float lastTimeThemeFadeStart = -700;
 
     // Use this for initialization
     void Awake()
@@ -32,6 +33,7 @@ public class AudioManager : MonoBehaviour
             instance = this;
         else
         {
+            Debug.Log("destroying audio");
             Destroy(gameObject);
             return;
         }
@@ -48,8 +50,15 @@ public class AudioManager : MonoBehaviour
         }
 
         targetVolume = themes[0].volume;
+        themes[0].volume = 0;
 
-        playTheme(0, true);
+
+
+    }
+
+    public void stopMenuTrack()
+    {
+        mainMenuTrack.Stop();
     }
 
     public void playMoveSound(Vector2 move)
@@ -67,7 +76,7 @@ public class AudioManager : MonoBehaviour
 
         if (curMoveSound == null && prevMoveSound == null)
             return;
-        if (curMoveSound.Equals(prevMoveSound))
+        if (curMoveSound != null && curMoveSound.Equals(prevMoveSound))
             return;
 
         if (prevMoveSound != null)
@@ -127,20 +136,39 @@ public class AudioManager : MonoBehaviour
         playTheme((instance.curTheme + 1) % instance.themes.Length, false);
     }
 
+    public static void startThemes()
+    {
+        for (int i = 0; i < instance.themes.Length; i++)
+        {
+            instance.themes[i].Play();
+        }
+    }
+
     public static void playTheme(int themeNum, bool force)
     {
         if (Time.time - instance.lastTimeThemeFadeStart < instance.FADE_TIME)
+        {
             return;
+        }
 
         Math.Clamp(themeNum, 0, instance.themes.Length);
 
         if (themeNum == instance.curTheme)
             return;
 
+        if (instance.curTheme == -1)
+            force = true;
+
         if (force)
         {
+            float tVol = instance.targetVolume * (themeNum == 2 ? .9f : 1);
+
             for (int i = 0; i < instance.themes.Length; i++)
-                instance.themes[i].volume = (i == themeNum) ? instance.targetVolume : 0;
+            {
+                instance.themes[i].volume = (i == themeNum) ? tVol : 0;
+            }
+
+            instance.curTheme = themeNum;
         }        
         else
         {

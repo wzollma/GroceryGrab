@@ -2009,7 +2009,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 4.02
   m_Direction: 1
   m_Center: {x: 0.03, y: 1.82, z: 0}
@@ -2059,7 +2059,7 @@ MonoBehaviour:
   timerFillCircle: {fileID: 8475423579524532930}
   angryObj: {fileID: 3224187152882913784}
   positionPos: {fileID: 1974640933862578288}
-  moveSpeed: 6
+  moveSpeed: 1.5
   minDistFromSection: 6
   grabAnimTime: 0.5
   timeBetweenRequests: 1
@@ -2083,7 +2083,7 @@ MonoBehaviour:
   version: 2
   radius: 0.5
   height: 2
-  repathRate: 0.5
+  repathRate: 0.1
   canSearch: 1
   canMove: 1
   maxSpeed: 1

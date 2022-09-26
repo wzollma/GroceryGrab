@@ -50,14 +50,18 @@ public class Customer : MonoBehaviour
         // Determine itemList
         itemList = new List<ItemInfo>();
 
-        int totalItems = 1;// Random.Range(6, 10);
-        int numItemsRequests = 0;// Random.Range(1, 4);
+        int totalItems = Random.Range(6, 10);
+        int numItemsRequests = Random.Range(1, 4);
         Item[] itemArr = new Item[totalItems + numItemsRequests];
         for (int i = 0; i < totalItems - numItemsRequests; i++)
             addRandomItemInfo(0, false);
 
         for (int i = 0; i < numItemsRequests; i++)
             addRandomItemInfo(Random.Range(0, itemList.Count), true);
+
+        ItemInfo top = getItemInfoAtTopOfList();
+        if (top.isRequest)
+            top.isRequest = false;
 
         withoutPreviewStartTime = timeBetweenRequests;
         setState(State.Browsing);
@@ -91,7 +95,7 @@ public class Customer : MonoBehaviour
             Vector3 destPos = destinationTrans.position;
             float dist = get2DDistance(transform.position, destinationTrans.position);
 
-            if (dist <= minDistFromSection)
+            if (!state.Equals(State.Angry) && dist <= minDistFromSection)
             {
                 if (state.Equals(State.Browsing))
                     StartCoroutine(grabItem());
@@ -162,7 +166,7 @@ public class Customer : MonoBehaviour
         if (spawnedItem != null)
         {
             Debug.LogWarning("spawnedItem: " + spawnedItem.name + " not successfully being grabbed by customer");
-            customerTakeItem(spawnedItem);
+            //customerTakeItem(spawnedItem);
         }
     }
 
@@ -203,16 +207,23 @@ public class Customer : MonoBehaviour
 
     void customerTakeItem(Item touchedItem)
     {
+        Debug.Log("0");
         touchedItem.giveToCustomer();
-        Player.instance.GetComponent<Interactor>().setHolding(false);
+
+        if (touchedItem.Equals(Player.instance.GetComponent<Interactor>().getCurInteractable()))
+            Player.instance.GetComponent<Interactor>().setHolding(false);
         if (UIItemHolder.childCount != 1)
             Debug.LogWarning("Customer: " + name + " has " + UIItemHolder.childCount + " UIItemPreview objects under customerCanvas holder");
+
+        Debug.Log("1");
 
         if (UIPreviewItem != null)
         {
             Debug.Log("destroying preview: " + UIPreviewItem.gameObject.name);
             Destroy(UIPreviewItem.gameObject);
         }
+
+        Debug.Log("2");
 
         //if (itemList[0] is ItemRequest)
         //{
@@ -222,14 +233,19 @@ public class Customer : MonoBehaviour
 
         UIPreviewItem = null;
         toggleUI(false);
+        Debug.Log("3");
         itemList.RemoveAt(0);
+        Debug.Log("4");
 
         withoutPreviewStartTime = Time.time;
+        Debug.Log("5");
 
         if (itemList.Count <= 0)
             setState(State.Leaving);
         else
             setState(State.Browsing);
+
+        Debug.Log("6");
     }
 
     private ItemInfo getItemInfoAtTopOfList()

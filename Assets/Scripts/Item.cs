@@ -29,6 +29,24 @@ public class Item : MonoBehaviour, Interactable
 
         if (rb != null)
             rb.interpolation = RigidbodyInterpolation.Interpolate;
+
+        if (nonTriggerCollider != null && triggerCollider != null)
+        {
+            if (nonTriggerCollider is BoxCollider)
+            {
+                BoxCollider col = nonTriggerCollider as BoxCollider;
+                BoxCollider colT = nonTriggerCollider as BoxCollider;
+
+                colT.size = colT.size * 1.2f;
+            }
+            else if (nonTriggerCollider is SphereCollider)
+            {
+                SphereCollider col = nonTriggerCollider as SphereCollider;
+                SphereCollider colT = nonTriggerCollider as SphereCollider;
+
+                colT.radius = colT.radius * 1.2f;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -58,6 +76,7 @@ public class Item : MonoBehaviour, Interactable
 
     public void removeRB()
     {
+        Debug.Log("destroying item RB");
         Destroy(GetComponent<Rigidbody>());
     }
 

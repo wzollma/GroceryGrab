@@ -26,7 +26,11 @@ public class MenuManager : MonoBehaviour
     }
 
     public void startGame()
-    {        
+    {
+        AudioManager.instance.stopMenuTrack();
+        AudioManager.startThemes();
+        AudioManager.playTheme(0, true);
+
         StartCoroutine(fadeColorImage(mainMenu, false, 0));
     }
 

@@ -48,6 +48,7 @@ public class CustomerManager : MonoBehaviour
     }
     public void removeCustomer(Customer customer)
     {
+        Debug.Log("destroying customer");
         Destroy(customer.gameObject);
         numCustomers--;
 

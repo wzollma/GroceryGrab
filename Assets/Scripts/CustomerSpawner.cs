@@ -7,7 +7,11 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] Customer[] customerPrefabs;
     [SerializeField] Transform exitTrans;
     [SerializeField] int customersToSpawn;
-    [SerializeField] Vector2 timeBetweenSpawns = new Vector2(10, 25);
+    [SerializeField] Vector2 timeBetweenSpawns;
+
+    const float TIME_TO_NEXT_SUBWAVE = 1f;
+
+    int subwaveNum;
 
     float timeToSpawnNext;
 
@@ -31,6 +35,30 @@ public class CustomerSpawner : MonoBehaviour
 
         customersToSpawn--;
         CustomerManager.instance.addCustomer();
-        timeToSpawnNext = Time.time + Random.Range(timeBetweenSpawns.x, timeBetweenSpawns.y);
+        timeToSpawnNext = Time.time + Random.Range(timeBetweenSpawns.x, timeBetweenSpawns.y) * getSubwaveMult();
+    }
+
+    float getSubwaveMult()
+    {
+        float timeInWave = Time.time % (TIME_TO_NEXT_SUBWAVE * 3);
+        float subwaveMult;
+        int prevSubwaveNum = subwaveNum;
+        int newSubwaveNum = (int)Mathf.Floor(timeInWave / TIME_TO_NEXT_SUBWAVE);
+
+        if (timeInWave > TIME_TO_NEXT_SUBWAVE * 2)
+        {
+            subwaveMult = .64f;
+            newSubwaveNum = 2;
+        }
+        else if (timeInWave > TIME_TO_NEXT_SUBWAVE)
+        {
+            subwaveMult = 8f;
+        }
+        else// if (timeInWave > 0)
+        {
+            subwaveMult = 1;
+        }
+
+        return subwaveMult;
     }
 }

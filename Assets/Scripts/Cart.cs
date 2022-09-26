@@ -89,6 +89,7 @@ public class Cart : MonoBehaviour, Interactable
         GetComponent<OutlineScript>().enabled = false;
         foreach (Collider c in colliders)
             c.enabled = false;
+        Debug.Log("destroying CArt RB");
         Destroy(GetComponent<Rigidbody>());
     }
 }
