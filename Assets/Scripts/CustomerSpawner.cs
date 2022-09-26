@@ -9,9 +9,9 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] int customersToSpawn;
     [SerializeField] Vector2 timeBetweenSpawns;
 
-    const float TIME_TO_NEXT_SUBWAVE = 1f;
+    const float TIME_TO_NEXT_SUBWAVE = 48;
 
-    int subwaveNum;
+    int waveNum;
 
     float timeToSpawnNext;
 
@@ -24,6 +24,13 @@ public class CustomerSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int newWaveNum = getWave();
+        if (waveNum != newWaveNum)
+        {
+            waveNum = newWaveNum;
+            AudioManager.playTheme(waveNum, false);
+        }
+
         if (Time.time > timeToSpawnNext)
             SpawnCustomer();
     }
@@ -38,26 +45,29 @@ public class CustomerSpawner : MonoBehaviour
         timeToSpawnNext = Time.time + Random.Range(timeBetweenSpawns.x, timeBetweenSpawns.y) * getSubwaveMult();
     }
 
+    int getWave()
+    {
+        int val = Mathf.Clamp((int)Mathf.Floor(Time.time / (TIME_TO_NEXT_SUBWAVE * 3)), 0, 3);
+
+        if (val > 2)
+            val = 2;
+
+        return val;
+    }
+
+    int getSubwave()
+    {        
+        float timeInWave = Time.time % (TIME_TO_NEXT_SUBWAVE * 3);
+        return (int)Mathf.Floor(timeInWave / TIME_TO_NEXT_SUBWAVE);
+    }
+
     float getSubwaveMult()
     {
-        float timeInWave = Time.time % (TIME_TO_NEXT_SUBWAVE * 3);
-        float subwaveMult;
-        int prevSubwaveNum = subwaveNum;
-        int newSubwaveNum = (int)Mathf.Floor(timeInWave / TIME_TO_NEXT_SUBWAVE);
+        const float SUBWAVE_MULT = .8f;
 
-        if (timeInWave > TIME_TO_NEXT_SUBWAVE * 2)
-        {
-            subwaveMult = .64f;
-            newSubwaveNum = 2;
-        }
-        else if (timeInWave > TIME_TO_NEXT_SUBWAVE)
-        {
-            subwaveMult = 8f;
-        }
-        else// if (timeInWave > 0)
-        {
-            subwaveMult = 1;
-        }
+        float subwaveMult = Mathf.Pow(SUBWAVE_MULT, getWave() + getSubwave());
+
+        Debug.LogWarning("Time: " + Time.time + "  wave: " + getWave() + "   subwave: " + getSubwave() + "     subwaveMult: " + subwaveMult);
 
         return subwaveMult;
     }

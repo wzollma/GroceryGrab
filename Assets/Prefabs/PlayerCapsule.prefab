@@ -229,9 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushLayers:
     serializedVersion: 2
-    m_Bits: 0
-  canPush: 0
-  strength: 1.1
+    m_Bits: 1024
+  canPush: 1
+  strength: 5
 --- !u!114 &5420857361349278248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,3 +363,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   staminaBarSize: 3
+  staminaFillImage: {fileID: 0}

@@ -57,13 +57,13 @@ public class CustomerManager : MonoBehaviour
 
     void changeNumCustomers()
     {
-        int numC = numCustomers;
+        //int numC = numCustomers;
 
-        if (numC > 6)
-            AudioManager.playTheme(2, false);
-        else if (numC > 3)
-            AudioManager.playTheme(1, false);
-        else
-            AudioManager.playTheme(0, false);
+        //if (numC > 6)
+        //    AudioManager.playTheme(2, false);
+        //else if (numC > 3)
+        //    AudioManager.playTheme(1, false);
+        //else
+        //    AudioManager.playTheme(0, false);
     }
 }

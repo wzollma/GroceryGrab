@@ -14,6 +14,7 @@ public class OutlineScript : MonoBehaviour
     private float startYRot;
     [SerializeField] private Vector3 offset;
     [SerializeField] private float scaleMult;
+    [SerializeField] private Vector3 scaleVec;
 
     private Renderer outlineRenderer;
 
@@ -22,6 +23,9 @@ public class OutlineScript : MonoBehaviour
     {
         if (scaleMult == 0)
             scaleMult = 1;
+
+        if (scaleVec.Equals(Vector3.zero))
+            scaleVec = Vector3.one * scaleMult;
     }
 
     void Start()
@@ -43,7 +47,15 @@ public class OutlineScript : MonoBehaviour
         GameObject outlineObj = Instantiate(gameObject, transform.position + offset, Quaternion.Euler(curRot.x, curRot.y + startYRot, curRot.z), transform);
         Vector3 thisScale = transform.localScale;
         Vector3 prevScale = outlineObj.transform.localScale;
-        outlineObj.transform.localScale = new Vector3(prevScale.x / thisScale.x, prevScale.y / thisScale.y, prevScale.y / thisScale.z);
+
+        if (GetComponent<Cart>() != null)
+        {
+            outlineObj.transform.localScale = Vector3.one * .693f;
+            outlineObj.transform.localPosition = new Vector3(0, 0, -0.18f);
+        }
+        else
+            outlineObj.transform.localScale = new Vector3(prevScale.x / thisScale.x * scaleVec.x, prevScale.y / thisScale.y * scaleVec.y, prevScale.y / thisScale.z * scaleVec.z);
+
         Vector3 prevLossy = outlineObj.transform.localScale;
         scaleFactor = (-1 + (scaleFactor + 1) * Mathf.Max(prevLossy.x / thisScale.x, prevLossy.y / thisScale.y, prevLossy.z / thisScale.z)) * scaleMult;
         Renderer rend = outlineObj.GetComponent<Renderer>();
