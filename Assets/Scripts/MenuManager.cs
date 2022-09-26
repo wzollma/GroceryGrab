@@ -40,7 +40,12 @@ public class MenuManager : MonoBehaviour
         
         Color prevColor = gameOverMenu.color;
         gameOverMenu.color = new Color(prevColor.r, prevColor.g, prevColor.b, startAlpha);
-        StartCoroutine(fadeColorImage(gameOverMenu, true, startAlpha));
+        //StartCoroutine(fadeColorImage(gameOverMenu, true, startAlpha));
+    }
+
+    public void quit()
+    {
+        Application.Quit();
     }
 
     public void restart()

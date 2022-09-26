@@ -57,7 +57,7 @@ public class Interactor : MonoBehaviour
             lastHighlightedItem = null;
         }
 
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame/*Keyboard.current.eKey.wasPressedThisFrame*/)
         {
             if (curInteractable == null)
                 pickUp(cameraTrans.position, cameraTrans.transform.forward/*cameraTarget.position - cameraTrans.position*/);

@@ -32,10 +32,12 @@ public class Player : MonoBehaviour
     {
         if (Time.timeScale == 0)
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
+            if (/*Keyboard.current.eKey*/Mouse.current.leftButton.wasPressedThisFrame)
                 MenuManager.instance.startGame();
             else if (Keyboard.current.rKey.wasPressedThisFrame)
                 MenuManager.instance.restart();
+            else if (Keyboard.current.escapeKey.wasPressedThisFrame)
+                MenuManager.instance.quit();
         }
 
         Cursor.visible = true;
