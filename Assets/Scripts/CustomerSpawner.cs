@@ -67,7 +67,7 @@ public class CustomerSpawner : MonoBehaviour
 
         float subwaveMult = Mathf.Pow(SUBWAVE_MULT, getWave() + getSubwave());
 
-        Debug.LogWarning("Time: " + Time.time + "  wave: " + getWave() + "   subwave: " + getSubwave() + "     subwaveMult: " + subwaveMult);
+        //Debug.LogWarning("Time: " + Time.time + "  wave: " + getWave() + "   subwave: " + getSubwave() + "     subwaveMult: " + subwaveMult);
 
         return subwaveMult;
     }
