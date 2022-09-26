@@ -47871,6 +47871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3599949617173183522, guid: ddace8acb01b515429869799cfecc4c8,
         type: 3}
+      propertyPath: m_text
+      value: Retail Rush
+      objectReference: {fileID: 0}
+    - target: {fileID: 3599949617173183522, guid: ddace8acb01b515429869799cfecc4c8,
+        type: 3}
       propertyPath: m_fontSize
       value: 58
       objectReference: {fileID: 0}
