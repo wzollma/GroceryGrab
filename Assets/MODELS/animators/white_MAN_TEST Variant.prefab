@@ -752,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1196146432046835415
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1461,10 +1461,20 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.41428703
       objectReference: {fileID: 0}
+    - target: {fileID: -624655169046912304, guid: 10c33203fb1360144a7a9f942a292cc1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 10c33203fb1360144a7a9f942a292cc1,
         type: 3}
       propertyPath: m_Name
       value: white_MAN_TEST Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10c33203fb1360144a7a9f942a292cc1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1569562740428639857, guid: 10c33203fb1360144a7a9f942a292cc1,
         type: 3}
@@ -1985,10 +1995,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.23
   m_Height: 3.54
   m_Direction: 1
-  m_Center: {x: -0.15, y: 2.01, z: 0}
+  m_Center: {x: 0.03, y: 2.01, z: 0}
 --- !u!136 &2370425479936114899
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1997,12 +2007,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4138486933705665607}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 4.02
   m_Direction: 1
-  m_Center: {x: 0.21, y: 1.82, z: 0}
+  m_Center: {x: 0.03, y: 1.82, z: 0}
 --- !u!114 &1446846257305468787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2049,7 +2059,7 @@ MonoBehaviour:
   timerFillCircle: {fileID: 8475423579524532930}
   angryObj: {fileID: 3224187152882913784}
   positionPos: {fileID: 1974640933862578288}
-  moveSpeed: 3
+  moveSpeed: 1.7
   minDistFromSection: 1.3
   grabAnimTime: 0.5
   timeBetweenRequests: 1
