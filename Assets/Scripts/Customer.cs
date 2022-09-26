@@ -21,7 +21,7 @@ public class Customer : MonoBehaviour
 
     public Transform exitTrans;
 
-    public enum State { Spawned, Browsing, GrabbingItem, Waiting, Angry, Leaving }
+    public enum State { Spawned, Browsing, GrabbingItem, Waiting, Angry, Leaving, Gone }
 
     public State state;
     public List<ItemInfo> itemList;
@@ -63,6 +63,12 @@ public class Customer : MonoBehaviour
         setState(State.Browsing);
     }
 
+    void leave()
+    {
+        setState(State.Gone);
+        CustomerManager.instance.removeCustomer(this);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -89,6 +95,8 @@ public class Customer : MonoBehaviour
             {
                 if (state.Equals(State.Browsing))
                     StartCoroutine(grabItem());
+                if (state.Equals(State.Leaving))
+                    leave();
             }
             else if (AIDest == null)
             {

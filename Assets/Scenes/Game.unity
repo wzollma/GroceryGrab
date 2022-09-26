@@ -33507,6 +33507,11 @@ PrefabInstance:
       propertyPath: numAngryText
       value: 
       objectReference: {fileID: 1312798725}
+    - target: {fileID: 7521036851732949624, guid: ca28a2bb73505bb4eb6f5929783573f3,
+        type: 3}
+      propertyPath: numCustomers
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7521036851732949625, guid: ca28a2bb73505bb4eb6f5929783573f3,
         type: 3}
       propertyPath: m_Name
