@@ -163,10 +163,16 @@ public class Customer : MonoBehaviour
             spawnedItem.transform.position = Vector3.Slerp(startPos, transform.position, (Time.time - startTime) / grabAnimTime);
         }
 
+        startTime = Time.time;
+        while (spawnedItem != null && Time.time - startTime < 2)
+        {
+            yield return null;
+        }
+
         if (spawnedItem != null)
         {
             Debug.LogWarning("spawnedItem: " + spawnedItem.name + " not successfully being grabbed by customer");
-            //customerTakeItem(spawnedItem);
+            customerTakeItem(spawnedItem);
         }
     }
 

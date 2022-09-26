@@ -37,7 +37,9 @@ public class MenuManager : MonoBehaviour
     public void lose()
     {
         Time.timeScale = 0;
-
+        
+        Color prevColor = gameOverMenu.color;
+        gameOverMenu.color = new Color(prevColor.r, prevColor.g, prevColor.b, startAlpha);
         StartCoroutine(fadeColorImage(gameOverMenu, true, startAlpha));
     }
 

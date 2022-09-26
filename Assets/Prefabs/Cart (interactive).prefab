@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 60078873046777272}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.733545, y: -0.00000047683716, z: 0.032744884}
-  m_LocalScale: {x: 0.2280842, y: 0.2280842, z: 0.2280842}
+  m_LocalScale: {x: 0.3421263, y: 0.2280842, z: 0.3421263}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 60078872875313534}
@@ -141,7 +141,8 @@ MonoBehaviour:
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
   startYRot: 180
   offset: {x: 0, y: 0, z: -0.02280842}
-  scaleMult: 0.945
+  scaleMult: 1.4175
+  scaleVec: {x: 0.945, y: 0.63, z: 0.945}
 --- !u!114 &60078873046777284
 MonoBehaviour:
   m_ObjectHideFlags: 0
