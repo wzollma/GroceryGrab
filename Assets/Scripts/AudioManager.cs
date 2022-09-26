@@ -14,6 +14,10 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] themes;
 
     [SerializeField] private float FADE_TIME = 4f;
+    [SerializeField] AudioSource walkSound;
+    [SerializeField] AudioSource runSound;
+
+    AudioSource curMoveSound;
 
     float targetVolume;
     int curTheme;
@@ -46,6 +50,30 @@ public class AudioManager : MonoBehaviour
         targetVolume = themes[0].volume;
 
         playTheme(0, true);
+    }
+
+    public void playMoveSound(Vector2 move)
+    {
+        bool sprint = Player.instance.getIsSprinting();
+        bool moving = !move.Equals(Vector2.zero);
+        AudioSource prevMoveSound = curMoveSound;
+
+        if (!moving)
+            curMoveSound = null;
+        else if (sprint)
+            curMoveSound = runSound;
+        else
+            curMoveSound = walkSound;
+
+        if (curMoveSound == null && prevMoveSound == null)
+            return;
+        if (curMoveSound.Equals(prevMoveSound))
+            return;
+
+        if (prevMoveSound != null)
+            prevMoveSound.Stop();
+        if (curMoveSound != null)
+            curMoveSound.Play();
     }
 
     public void Play(string name)

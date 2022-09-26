@@ -73,6 +73,11 @@ public class Player : MonoBehaviour
         sprintKeyDown = on;
     }
 
+    public bool getIsSprinting()
+    {
+        return isSprinting;
+    }
+
     public bool canSprint()
     {
         return staminaAmount > 0 && !cantSprint;
