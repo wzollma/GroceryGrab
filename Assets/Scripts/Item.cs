@@ -77,6 +77,7 @@ public class Item : MonoBehaviour, Interactable
         rb.useGravity = false;
         grabbable = true;
         pickedUp = true;
+        AudioManager.instance.Play("pick_up" + Random.Range(1, 4));
     }
 
     public void onDrop()
@@ -136,6 +137,7 @@ public class Item : MonoBehaviour, Interactable
         if (!pickedUp && grabbable && (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")) || collision.gameObject.GetComponent<Cart>() != null))
         {
             Debug.Log("item: " + itemName + " hitting ground");
+            AudioManager.instance.Play("drop" + Random.Range(1, 5));
             grabbable = false;
         }
     }

@@ -51,7 +51,7 @@ public class Customer : MonoBehaviour
         itemList = new List<ItemInfo>();
 
         int totalItems = Random.Range(6, 10);
-        int numItemsRequests = Random.Range(0, 1);
+        int numItemsRequests = totalItems;//Random.Range(3, 5);
         Item[] itemArr = new Item[totalItems + numItemsRequests];
         for (int i = 0; i < totalItems - numItemsRequests; i++)
             addRandomItemInfo(0, false);
@@ -73,7 +73,7 @@ public class Customer : MonoBehaviour
     void Update()
     {
         ItemInfo topItem = getItemInfoAtTopOfList();
-        if (topItem == null && state.Equals(State.Leaving))
+        if (topItem == null && !state.Equals(State.Leaving))
             setState(State.Leaving);
 
         angryObj.SetActive(state.Equals(State.Angry));
@@ -120,6 +120,7 @@ public class Customer : MonoBehaviour
                     toggleUI(true);
                     UIPreviewItem = spawnItemPreview(topItem.itemPrefab);                    
                     timerFillCircle.fillAmount = 0;
+                    AudioManager.instance.Play("Customer_Request" + Random.Range(1, 4));
                 }
             }               
         }
@@ -127,9 +128,10 @@ public class Customer : MonoBehaviour
         {
             timerFillCircle.fillAmount += Time.deltaTime / requestTimer;
 
-            if (timerFillCircle.fillAmount >= 1)
+            if (timerFillCircle.fillAmount >= 1 && !state.Equals(State.Angry) && !state.Equals(State.Leaving) && !state.Equals(State.Gone))
             {
                 //toggleUI(false);
+                AudioManager.instance.Play("Customer_Aggro");
                 setState(State.Angry);
             }
         }
@@ -194,6 +196,7 @@ public class Customer : MonoBehaviour
             Debug.Log("touchedItem " + touchedItem.itemName);
 
             touchedItem.giveToCustomer();
+            Player.instance.GetComponent<Interactor>().setHolding(false);
             if (UIItemHolder.childCount != 1)
                 Debug.LogWarning("Customer: " + name + " has " + UIItemHolder.childCount + " UIItemPreview objects under customerCanvas holder");
 
