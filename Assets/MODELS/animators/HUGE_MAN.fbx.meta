@@ -1,0 +1,608 @@
+fileFormatVersion: 2
+guid: 17a0703539517364d9067db1cb57f898
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: -1734558494398779796
+    second: rig.002|DIAGLOGUE
+  - first:
+      74: 4167889440119497813
+    second: rig.002|DIAGLOGUE.001
+  - first:
+      74: 6775387808710240266
+    second: rig.002|GRAB
+  - first:
+      74: -798550825376382596
+    second: rig.002|HUGE_MAN.002Action
+  - first:
+      74: -6623071226920779328
+    second: rig.002|IDLE
+  - first:
+      74: 2888949696076975249
+    second: rig.002|WALK_CYCLE
+  - first:
+      74: 3442251747500341986
+    second: HUGE_MAN.002|HUGE_MAN.002Action
+  - first:
+      74: 3305591895459313731
+    second: HUGE_MAN.002|IDLE
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GROCERY_ATLAS
+    second: {fileID: 2100000, guid: c799564b40e5b0442bbcaa812fe4b5a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye
+    second: {fileID: 2100000, guid: b68af056aabef644bb9b1e5f2a14c9d0, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'RightUpperLeg' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: rig.002|DIAGLOGUE
+      takeName: rig.002|DIAGLOGUE
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rig.002|DIAGLOGUE.001
+      takeName: rig.002|DIAGLOGUE.001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 56
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rig.002|GRAB
+      takeName: rig.002|GRAB
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rig.002|HUGE_MAN.002Action
+      takeName: rig.002|HUGE_MAN.002Action
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rig.002|IDLE
+      takeName: rig.002|IDLE
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 77
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rig.002|WALK_CYCLE
+      takeName: rig.002|WALK_CYCLE
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 62
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: HUGE_MAN.002|HUGE_MAN.002Action
+      takeName: HUGE_MAN.002|HUGE_MAN.002Action
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: HUGE_MAN.002|IDLE
+      takeName: HUGE_MAN.002|IDLE
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 77
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: HUGE_MAN(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rig.002
+      parentName: HUGE_MAN(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071067, y: 5.302452e-33, z: 5.302451e-33, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: MCH-torso.parent
+      parentName: rig.002
+      position: {x: -0, y: 0.0008198728, z: 0.024541825}
+      rotation: {x: -0.00000008940697, y: 6.123234e-17, z: -6.617445e-24, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: torso
+      parentName: MCH-torso.parent
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -3.9443045e-31, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 0.99999976}
+    - name: MCH-spine.001
+      parentName: torso
+      position: {x: -0, y: -0.00081081386, z: 0.0047403146}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: spine_fk.001
+      parentName: MCH-spine.001
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.74931765, y: 9.926167e-24, z: -5.2274065e-24, w: 0.6622108}
+      scale: {x: 1, y: 0.99999964, z: 0.99999964}
+    - name: MCH-spine
+      parentName: spine_fk.001
+      position: {x: -0, y: -0.0030946073, z: 3.7252902e-11}
+      rotation: {x: -0.74931765, y: -5.7995476e-24, z: 4.3017374e-26, w: 0.6622107}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+    - name: spine_fk
+      parentName: MCH-spine
+      position: {x: -0, y: 4.4703483e-10, z: 0.0000000023841857}
+      rotation: {x: 0.7904555, y: 2.8336838e-24, z: -3.886061e-25, w: 0.61251944}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+    - name: tweak_spine
+      parentName: spine_fk
+      position: {x: -0, y: -0.0034475266, z: 7.4505804e-11}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ORG-spine
+      parentName: tweak_spine
+      position: {x: -0, y: -0.0000000010430813, z: 7.4505804e-11}
+      rotation: {x: 0.030569138, y: 0.017311273, z: 0.0732721, w: 0.9966931}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: ORG-pelvis.L
+      parentName: ORG-spine
+      position: {x: -0.00009970525, y: -0.0002684138, z: 0.0002245216}
+      rotation: {x: -0.21100451, y: 0.7597018, z: 0.35657567, w: 0.5011827}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: ORG-pelvis.R
+      parentName: ORG-spine
+      position: {x: 0.00009970525, y: -0.0002684138, z: 0.0002245216}
+      rotation: {x: -0.21100451, y: -0.7597018, z: -0.35657567, w: 0.5011827}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: ORG-thigh.L
+      parentName: ORG-spine
+      position: {x: -0.0024946574, y: 0.00036233396, z: 0.00052288757}
+      rotation: {x: 0.95354474, y: -0.050280847, z: 0.22883876, w: 0.1893596}
+      scale: {x: 0.9999999, y: 1.0000004, z: 0.9999997}
+    - name: ORG-shin.L
+      parentName: ORG-thigh.L
+      position: {x: 4.0978193e-10, y: 0.009862822, z: -3.352761e-10}
+      rotation: {x: 0.13192359, y: -0.00000005029142, z: 0.00000008940697, w: 0.9912599}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000008}
+    - name: ORG-foot.L
+      parentName: ORG-shin.L
+      position: {x: 2.6077032e-10, y: 0.011524802, z: 1.8626451e-11}
+      rotation: {x: -0.63277274, y: -0.1492213, z: -0.08538761, w: 0.7550104}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000007}
+    - name: ORG-toe.L
+      parentName: ORG-foot.L
+      position: {x: -0.000000001638399, y: 0.0037360534, z: -0.0000000012479722}
+      rotation: {x: 0.05259829, y: 0.9790642, z: -0.19635585, w: 0.010539584}
+      scale: {x: 1, y: 0.9999998, z: 0.9999986}
+    - name: ORG-heel.02.L
+      parentName: ORG-foot.L
+      position: {x: 0.00051769614, y: 0.0009026317, z: 0.0015940575}
+      rotation: {x: 0.35978523, y: -0.42292285, z: 0.56668067, w: 0.60873973}
+      scale: {x: 0.9999995, y: 0.9999998, z: 1}
+    - name: ORG-thigh.R
+      parentName: ORG-spine
+      position: {x: 0.0024946574, y: 0.00036233396, z: 0.00052288757}
+      rotation: {x: 0.95354474, y: 0.050280847, z: -0.22883876, w: 0.1893596}
+      scale: {x: 0.9999999, y: 1.0000004, z: 0.9999997}
+    - name: ORG-shin.R
+      parentName: ORG-thigh.R
+      position: {x: -4.0978193e-10, y: 0.009862822, z: -3.352761e-10}
+      rotation: {x: 0.13192359, y: 0.00000005029142, z: -0.00000008940697, w: 0.9912599}
+      scale: {x: 1.0000001, y: 1.0000007, z: 1.0000008}
+    - name: ORG-foot.R
+      parentName: ORG-shin.R
+      position: {x: -2.6077032e-10, y: 0.011524802, z: 1.8626451e-11}
+      rotation: {x: -0.5920482, y: 0.118282385, z: 0.14129275, w: 0.78455377}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000007}
+    - name: ORG-toe.R
+      parentName: ORG-foot.R
+      position: {x: 0.000000001638399, y: 0.0037360534, z: -0.0000000012479722}
+      rotation: {x: -0.05259829, y: 0.9790642, z: -0.19635585, w: -0.010539584}
+      scale: {x: 1, y: 0.9999998, z: 0.9999986}
+    - name: ORG-heel.02.R
+      parentName: ORG-foot.R
+      position: {x: -0.00051769614, y: 0.0009026317, z: 0.0015940575}
+      rotation: {x: -0.5666808, y: -0.6087397, z: -0.35978496, w: 0.42292282}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1.0000001}
+    - name: tweak_spine.001
+      parentName: spine_fk
+      position: {x: -0, y: 6.426126e-10, z: 4.0978193e-10}
+      rotation: {x: -0.06447639, y: 1.9330261e-24, z: -2.2299652e-24, w: 0.9979192}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ORG-spine.001
+      parentName: tweak_spine.001
+      position: {x: -0, y: 0.0000000011827797, z: 1.4901161e-10}
+      rotation: {x: -0.000000119209275, y: 1.7292726e-24, z: 2.8022125e-23, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: MCH-spine.002
+      parentName: torso
+      position: {x: -0, y: -0.00081081386, z: 0.0047403146}
+      rotation: {x: 2.24208e-40, y: -5.684343e-10, z: -0.0000000011368684, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: spine_fk.002
+      parentName: MCH-spine.002
+      position: {x: -3.4760885e-11, y: 6.810296e-11, z: 0.0000000013090903}
+      rotation: {x: 0.6957684, y: 4.3374593e-10, z: 0.0000000011626353, w: 0.7182662}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MCH-pivot
+      parentName: spine_fk.002
+      position: {x: -3.3236788e-12, y: 3.39519e-10, z: 4.084673e-11}
+      rotation: {x: 0.07746419, y: 5.248077e-10, z: -9.66467e-10, w: 0.9969952}
+      scale: {x: 1, y: 0.9999997, z: 0.9999998}
+    - name: tweak_spine.002
+      parentName: MCH-pivot
+      position: {x: -2.6842506e-11, y: -0.0000000029543568, z: 1.5138196e-10}
+      rotation: {x: -0.07746419, y: -0.0000000011340566, z: 8.745387e-11, w: 0.9969952}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: ORG-spine.002
+      parentName: tweak_spine.002
+      position: {x: -2.6842507e-11, y: -0.0000000019927744, z: 4.369526e-11}
+      rotation: {x: -0, y: -6.216249e-12, z: 1.9530044e-10, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: MCH-spine.003
+      parentName: spine_fk.002
+      position: {x: 6.984919e-12, y: 0.0039156275, z: 8.2945914e-11}
+      rotation: {x: -0.69576836, y: 0.0000000011226714, z: 0.0000000020780841, w: 0.71826625}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: spine_fk.003
+      parentName: MCH-spine.003
+      position: {x: -1.16415315e-11, y: -4.598405e-11, z: -0.0000000011993688}
+      rotation: {x: 0.7131191, y: -0.000000085764825, z: -0.00000008789942, w: 0.701043}
+      scale: {x: 0.99999994, y: 0.9999998, z: 0.9999999}
+    - name: ORG-spine.004
+      parentName: spine_fk.003
+      position: {x: 8.8475643e-11, y: 0.004324321, z: -6.600749e-10}
+      rotation: {x: 0.17933606, y: 3.3468336e-10, z: -0.000000044703132, w: 0.98378783}
+      scale: {x: 0.8909981, y: 1.2596401, z: 0.890998}
+    - name: ORG-spine.005
+      parentName: ORG-spine.004
+      position: {x: -1.8626451e-11, y: 0.00091354374, z: -6.7986544e-10}
+      rotation: {x: -0.0948583, y: 8.839017e-10, z: 0.000000023420476, w: 0.9954908}
+      scale: {x: 1.1349049, y: 0.78890127, z: 1.1260004}
+    - name: ORG-spine.006
+      parentName: ORG-spine.005
+      position: {x: 1.3969838e-11, y: 0.00086574367, z: -3.707828e-10}
+      rotation: {x: -0.093711995, y: 0.00000011859854, z: 0.000000010828252, w: 0.9955994}
+      scale: {x: 0.9889315, y: 1.0469836, z: 0.9672883}
+    - name: tweak_spine.003
+      parentName: spine_fk.003
+      position: {x: 1.4319085e-10, y: -0.0000000016807462, z: -3.1141098e-10}
+      rotation: {x: -0, y: 0.000000002302535, z: 0.0000000016662227, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+    - name: ORG-spine.003
+      parentName: tweak_spine.003
+      position: {x: 1.4377292e-10, y: -0.0000000016830745, z: 2.8463545e-10}
+      rotation: {x: 0.000000119209275, y: -0.0000000022637041, z: 6.071587e-10, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 0.9999999}
+    - name: ORG-shoulder.L
+      parentName: ORG-spine.003
+      position: {x: -0.0004144656, y: 0.0031854687, z: 0.0016286144}
+      rotation: {x: -0.5755514, y: 0.42119354, z: 0.4142868, w: 0.5654229}
+      scale: {x: 1.0000002, y: 1.0000006, z: 1.0000002}
+    - name: ORG-upper_arm.L
+      parentName: ORG-shoulder.L
+      position: {x: 0.000051894112, y: 0.004140649, z: -0.0003969204}
+      rotation: {x: 0.13987784, y: -0.9433094, z: 0.06038189, w: 0.2948823}
+      scale: {x: 0.9611592, y: 0.96115935, z: 0.96115917}
+    - name: ORG-forearm.L
+      parentName: ORG-upper_arm.L
+      position: {x: -0.0000000018626451, y: 0.005604425, z: 0.000000002682209}
+      rotation: {x: 0.027774954, y: 0.000100553, z: -0.00246559, w: 0.9996112}
+      scale: {x: 1.0021912, y: 1.0021921, z: 1.0021918}
+    - name: ORG-hand.L
+      parentName: ORG-forearm.L
+      position: {x: -0.000000001490116, y: 0.006035348, z: -5.9604643e-10}
+      rotation: {x: -0.01284114, y: -0.000731509, z: -0.05685906, w: 0.99829936}
+      scale: {x: 1.0381356, y: 1.0381347, z: 1.0381349}
+    - name: ORG-shoulder.R
+      parentName: ORG-spine.003
+      position: {x: 0.00041446649, y: 0.0031854706, z: 0.0016286137}
+      rotation: {x: -0.5755515, y: -0.42119336, z: -0.41428673, w: 0.56542295}
+      scale: {x: 1, y: 1.0000005, z: 1.0000002}
+    - name: ORG-upper_arm.R
+      parentName: ORG-shoulder.R
+      position: {x: -0.00005189195, y: 0.0041406485, z: -0.00039691365}
+      rotation: {x: -0.13987772, y: -0.9433095, z: 0.060382023, w: -0.29488236}
+      scale: {x: 0.9537349, y: 0.95373523, z: 0.9537346}
+    - name: ORG-forearm.R
+      parentName: ORG-upper_arm.R
+      position: {x: -5.3085386e-10, y: 0.005604426, z: -6.0535965e-11}
+      rotation: {x: 0.027774928, y: -0.00010034437, z: 0.0024654854, w: 0.99961114}
+      scale: {x: 1.00201, y: 1.0020102, z: 1.0020102}
+    - name: ORG-hand.R
+      parentName: ORG-forearm.R
+      position: {x: 5.9604643e-10, y: 0.006035349, z: 9.685754e-10}
+      rotation: {x: -0.012841132, y: 0.0007311987, z: 0.056859113, w: 0.9982994}
+      scale: {x: 1.0464063, y: 1.046406, z: 1.0464063}
+    - name: ORG-breast.L
+      parentName: ORG-spine.003
+      position: {x: -0.0021495728, y: 0.0005690682, z: -0.0011032167}
+      rotation: {x: 0.000000112608426, y: 0.7131191, z: 0.701043, w: -0.000000054106668}
+      scale: {x: 1.0000008, y: 0.99999976, z: 1}
+    - name: ORG-breast.R
+      parentName: ORG-spine.003
+      position: {x: 0.0021495724, y: 0.00056907197, z: -0.0011032181}
+      rotation: {x: 0.000000112608426, y: 0.7131191, z: 0.701043, w: -0.000000054106668}
+      scale: {x: 1.0000008, y: 0.99999976, z: 1}
+    - name: HUGE_MAN.002
+      parentName: HUGE_MAN(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -6.123234e-17, y: 1, z: 6.123234e-17, w: -3.7493994e-33}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: HUGE_MAN.002
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
