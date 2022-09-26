@@ -50,8 +50,8 @@ public class Customer : MonoBehaviour
         // Determine itemList
         itemList = new List<ItemInfo>();
 
-        int totalItems = Random.Range(6, 10);
-        int numItemsRequests = Random.Range(1, 4);
+        int totalItems = 1;// Random.Range(6, 10);
+        int numItemsRequests = 0;// Random.Range(1, 4);
         Item[] itemArr = new Item[totalItems + numItemsRequests];
         for (int i = 0; i < totalItems - numItemsRequests; i++)
             addRandomItemInfo(0, false);
@@ -160,7 +160,10 @@ public class Customer : MonoBehaviour
         }
 
         if (spawnedItem != null)
-            Debug.Log("spawnedItem: " + spawnedItem.name + " not successfully being grabbed by customer");
+        {
+            Debug.LogWarning("spawnedItem: " + spawnedItem.name + " not successfully being grabbed by customer");
+            customerTakeItem(spawnedItem);
+        }
     }
 
     void addRandomItemInfo(int index, bool makeRequest)
@@ -194,35 +197,39 @@ public class Customer : MonoBehaviour
         if (touchedItem.itemName.Equals(getItemInfoAtTopOfList().itemPrefab.itemName) && !touchedItem.destroyed && touchedItem.canBeGrabbedByCustomer(this))
         {
             Debug.Log("touchedItem " + touchedItem.itemName);
-
-            touchedItem.giveToCustomer();
-            Player.instance.GetComponent<Interactor>().setHolding(false);
-            if (UIItemHolder.childCount != 1)
-                Debug.LogWarning("Customer: " + name + " has " + UIItemHolder.childCount + " UIItemPreview objects under customerCanvas holder");
-
-            if (UIPreviewItem != null)
-            {
-                Debug.Log("destroying preview: " + UIPreviewItem.gameObject.name);
-                Destroy(UIPreviewItem.gameObject);
-            }
-
-            //if (itemList[0] is ItemRequest)
-            //{
-            //    Debug.Log("destroying spawnedRequest.gameObject: " + itemList[0].gameObject);
-            //    Destroy(itemList[0].gameObject);
-            //}
-
-            UIPreviewItem = null;
-            toggleUI(false);
-            itemList.RemoveAt(0);
-
-            withoutPreviewStartTime = Time.time;                        
-
-            if (itemList.Count <= 0)
-                setState(State.Leaving);
-            else
-                setState(State.Browsing);
+            customerTakeItem(touchedItem);
         }
+    }
+
+    void customerTakeItem(Item touchedItem)
+    {
+        touchedItem.giveToCustomer();
+        Player.instance.GetComponent<Interactor>().setHolding(false);
+        if (UIItemHolder.childCount != 1)
+            Debug.LogWarning("Customer: " + name + " has " + UIItemHolder.childCount + " UIItemPreview objects under customerCanvas holder");
+
+        if (UIPreviewItem != null)
+        {
+            Debug.Log("destroying preview: " + UIPreviewItem.gameObject.name);
+            Destroy(UIPreviewItem.gameObject);
+        }
+
+        //if (itemList[0] is ItemRequest)
+        //{
+        //    Debug.Log("destroying spawnedRequest.gameObject: " + itemList[0].gameObject);
+        //    Destroy(itemList[0].gameObject);
+        //}
+
+        UIPreviewItem = null;
+        toggleUI(false);
+        itemList.RemoveAt(0);
+
+        withoutPreviewStartTime = Time.time;
+
+        if (itemList.Count <= 0)
+            setState(State.Leaving);
+        else
+            setState(State.Browsing);
     }
 
     private ItemInfo getItemInfoAtTopOfList()

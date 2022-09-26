@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         {
             if (Keyboard.current.eKey.wasPressedThisFrame)
                 MenuManager.instance.startGame();
-            else if (Keyboard.current.eKey.wasPressedThisFrame)
+            else if (Keyboard.current.rKey.wasPressedThisFrame)
                 MenuManager.instance.restart();
         }
 

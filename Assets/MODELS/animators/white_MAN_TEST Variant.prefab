@@ -2059,12 +2059,12 @@ MonoBehaviour:
   timerFillCircle: {fileID: 8475423579524532930}
   angryObj: {fileID: 3224187152882913784}
   positionPos: {fileID: 1974640933862578288}
-  moveSpeed: 1.7
-  minDistFromSection: 2.5
+  moveSpeed: 6
+  minDistFromSection: 6
   grabAnimTime: 0.5
   timeBetweenRequests: 1
   requestTimer: 20
-  aggroRange: 14
+  aggroRange: 16
   exitTrans: {fileID: 0}
   state: 0
   itemList: []
