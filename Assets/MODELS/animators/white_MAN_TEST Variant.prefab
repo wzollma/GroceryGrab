@@ -899,17 +899,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 10c33203fb1360144a7a9f942a292cc1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10c33203fb1360144a7a9f942a292cc1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10c33203fb1360144a7a9f942a292cc1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10c33203fb1360144a7a9f942a292cc1,
         type: 3}
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   timerFillCircle: {fileID: 8475423579524532930}
   angryObj: {fileID: 3224187152882913784}
   positionPos: {fileID: 1974640933862578288}
-  moveSpeed: 5
+  moveSpeed: 3
   minDistFromSection: 1.3
   grabAnimTime: 0.5
   timeBetweenRequests: 1
