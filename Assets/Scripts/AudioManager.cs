@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
     float targetVolume;
     int curTheme;
 
+    float lastTimeThemeFadeStart;
+
     // Use this for initialization
     void Awake()
     {
@@ -99,7 +101,13 @@ public class AudioManager : MonoBehaviour
 
     public static void playTheme(int themeNum, bool force)
     {
+        if (Time.time - instance.lastTimeThemeFadeStart < instance.FADE_TIME)
+            return;
+
         Math.Clamp(themeNum, 0, instance.themes.Length);
+
+        if (themeNum == instance.curTheme)
+            return;
 
         if (force)
         {
@@ -113,7 +121,9 @@ public class AudioManager : MonoBehaviour
     }
 
     IEnumerator fadeTracks(int prevTrackNum, int newTrackNum)
-    {        
+    {
+        lastTimeThemeFadeStart = Time.time;
+        Debug.Log("startFade prev: " + prevTrackNum + " new: " + newTrackNum);
         float startTime = Time.time;
 
         AudioSource prevTrack = instance.themes[prevTrackNum];
@@ -132,5 +142,6 @@ public class AudioManager : MonoBehaviour
         prevTrack.volume = 0;
         newTrack.volume = targetVolume;
         curTheme = newTrackNum;
+        Debug.Log("finishFade prev: " + prevTrackNum + " new: " + newTrackNum);
     }
 }

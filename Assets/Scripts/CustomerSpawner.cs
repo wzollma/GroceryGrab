@@ -30,6 +30,7 @@ public class CustomerSpawner : MonoBehaviour
         spawnedCustomer.exitTrans = exitTrans;
 
         customersToSpawn--;
+        CustomerManager.instance.addCustomer();
         timeToSpawnNext = Time.time + Random.Range(timeBetweenSpawns.x, timeBetweenSpawns.y);
     }
 }

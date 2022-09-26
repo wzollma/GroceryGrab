@@ -9,6 +9,7 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private int loseNumAngryCustomers = 8;
 
     public static CustomerManager instance;
+    [SerializeField] int numCustomers;
 
     private int numAngryCustomers;
 
@@ -32,5 +33,36 @@ public class CustomerManager : MonoBehaviour
     {
         Debug.Log("GAME OVER");
         MenuManager.instance.lose();
+    }
+
+    public int getNumCustomers()
+    {
+        return numCustomers;
+    }
+
+    public void addCustomer()
+    {
+        numCustomers++;
+
+        changeNumCustomers();
+    }
+    public void removeCustomer(Customer customer)
+    {
+        Destroy(customer.gameObject);
+        numCustomers--;
+
+        changeNumCustomers();
+    }
+
+    void changeNumCustomers()
+    {
+        int numC = numCustomers;
+
+        if (numC > 6)
+            AudioManager.playTheme(2, false);
+        else if (numC > 3)
+            AudioManager.playTheme(1, false);
+        else
+            AudioManager.playTheme(0, false);
     }
 }
