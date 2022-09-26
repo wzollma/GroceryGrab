@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource[] themes;
 
-    [SerializeField] private float FADE_TIME = 4f;
+    [SerializeField] public float FADE_TIME = 4f;
     [SerializeField] AudioSource walkSound;
     [SerializeField] AudioSource runSound;
     [SerializeField] AudioSource mainMenuTrack;

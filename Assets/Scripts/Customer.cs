@@ -83,6 +83,8 @@ public class Customer : MonoBehaviour
         angryObj.SetActive(state.Equals(State.Angry));
         positionPos.SetActive(!state.Equals(State.Angry));
 
+        GetComponent<AIPath>().maxSpeed = state.Equals(State.GrabbingItem) ? 0 : moveSpeed;
+
         if (Time.time < withoutPreviewStartTime + timeBetweenRequests)
             return;
 
@@ -160,11 +162,11 @@ public class Customer : MonoBehaviour
             if (spawnedItem == null || spawnedItem.gameObject == null)
                 break;
 
-            spawnedItem.transform.position = Vector3.Slerp(startPos, transform.position, (Time.time - startTime) / grabAnimTime);
+            spawnedItem.transform.position = Vector3.Slerp(startPos, transform.position + Vector3.up * 1.331f, (Time.time - startTime) / grabAnimTime);
         }
 
         startTime = Time.time;
-        while (spawnedItem != null && Time.time - startTime < 2)
+        while (spawnedItem != null && Time.time - startTime < .5f)
         {
             yield return null;
         }

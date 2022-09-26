@@ -2059,12 +2059,15 @@ MonoBehaviour:
   timerFillCircle: {fileID: 8475423579524532930}
   angryObj: {fileID: 3224187152882913784}
   positionPos: {fileID: 1974640933862578288}
+  locationIconText: {fileID: 4961940415732766039}
   moveSpeed: 1.5
-  minDistFromSection: 6
+  minDistFromSection: 3.5
   grabAnimTime: 0.5
   timeBetweenRequests: 1
   requestTimer: 20
   aggroRange: 16
+  satisfiedIconColor: {r: 0.53333336, g: 0.90588236, b: 0.24313726, a: 1}
+  requestingIconColor: {r: 0.7075472, g: 0.18356179, b: 0.65650964, a: 1}
   exitTrans: {fileID: 0}
   state: 0
   itemList: []

@@ -104,8 +104,10 @@ MonoBehaviour:
   outlineScaleFactor: -1.02
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
   startYRot: 0
+  rotVec: {x: 0, y: 180, z: 0}
   offset: {x: 0, y: 0, z: 0}
   scaleMult: 0
+  scaleVec: {x: 0, y: 0, z: 1.7114229}
 --- !u!114 &2478792824434341662
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,9 +12,10 @@ public class OutlineScript : MonoBehaviour
     private Color outlineColor;
     [SerializeField]
     private float startYRot;
+    [SerializeField] private Vector3 rotVec;
     [SerializeField] private Vector3 offset;
     [SerializeField] private float scaleMult;
-    [SerializeField] private Vector3 scaleVec;
+    [SerializeField] private Vector3 scaleVec;    
 
     private Renderer outlineRenderer;
 
@@ -24,8 +25,11 @@ public class OutlineScript : MonoBehaviour
         if (scaleMult == 0)
             scaleMult = 1;
 
-        if (scaleVec.Equals(Vector3.zero))
-            scaleVec = Vector3.one * scaleMult;
+        //processes scale vec
+        scaleVec = new Vector3(scaleVec.x == 0 ? scaleMult : scaleVec.x, scaleVec.y == 0 ? scaleMult : scaleVec.y, scaleVec.z == 0 ? scaleMult : scaleVec.z);
+
+        if (rotVec.Equals(Vector3.zero))
+            rotVec = Vector3.up * startYRot;
     }
 
     void Start()
@@ -44,7 +48,7 @@ public class OutlineScript : MonoBehaviour
     Renderer CreateOutline(Material outlineMat, float scaleFactor, Color color)
     {
         Vector3 curRot = transform.rotation.eulerAngles;
-        GameObject outlineObj = Instantiate(gameObject, transform.position + offset, Quaternion.Euler(curRot.x, curRot.y + startYRot, curRot.z), transform);
+        GameObject outlineObj = Instantiate(gameObject, transform.position + offset, Quaternion.Euler(curRot.x + rotVec.x, curRot.y + rotVec.y, curRot.z + rotVec.z), transform);
         Vector3 thisScale = transform.localScale;
         Vector3 prevScale = outlineObj.transform.localScale;
 
