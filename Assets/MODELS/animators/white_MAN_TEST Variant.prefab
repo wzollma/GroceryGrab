@@ -2060,10 +2060,10 @@ MonoBehaviour:
   angryObj: {fileID: 3224187152882913784}
   positionPos: {fileID: 1974640933862578288}
   moveSpeed: 1.7
-  minDistFromSection: 1.3
+  minDistFromSection: 2.5
   grabAnimTime: 0.5
   timeBetweenRequests: 1
-  requestTimer: 8
+  requestTimer: 20
   aggroRange: 14
   exitTrans: {fileID: 0}
   state: 0

@@ -35,6 +35,8 @@ public class Interactor : MonoBehaviour
     public void setHolding(bool hold)
     {
         holding = hold;
+        curInteractable = null;
+        lastHighlightedItem = null;
     }
 
     // Update is called once per frame

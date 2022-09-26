@@ -159,7 +159,8 @@ namespace StarterAssets
 				
 			Player.instance.setIsSprinting(isSprinting);
 			Player.instance.setIsSprintKeyDown(_input.sprint);
-			AudioManager.instance.playMoveSound(_input.move);
+			if (AudioManager.instance != null)
+				AudioManager.instance.playMoveSound(_input.move);
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 

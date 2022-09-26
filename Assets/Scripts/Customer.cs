@@ -51,7 +51,7 @@ public class Customer : MonoBehaviour
         itemList = new List<ItemInfo>();
 
         int totalItems = Random.Range(6, 10);
-        int numItemsRequests = totalItems;//Random.Range(3, 5);
+        int numItemsRequests = Random.Range(1, 4);
         Item[] itemArr = new Item[totalItems + numItemsRequests];
         for (int i = 0; i < totalItems - numItemsRequests; i++)
             addRandomItemInfo(0, false);
