@@ -30,14 +30,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            MenuManager.instance.quit();
+
         if (Time.timeScale == 0)
         {
             if (/*Keyboard.current.eKey*/!CustomerManager.instance.shouldLose() && Mouse.current.leftButton.wasPressedThisFrame)
                 MenuManager.instance.startGame();
             else if (Keyboard.current.rKey.wasPressedThisFrame)
-                MenuManager.instance.restart();
-            else if (Keyboard.current.escapeKey.wasPressedThisFrame)
-                MenuManager.instance.quit();
+                MenuManager.instance.restart();            
         }
 
         Cursor.visible = true;
