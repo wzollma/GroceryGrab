@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     {
         if (Time.timeScale == 0)
         {
-            if (/*Keyboard.current.eKey*/Mouse.current.leftButton.wasPressedThisFrame)
+            if (/*Keyboard.current.eKey*/!CustomerManager.instance.shouldLose() && Mouse.current.leftButton.wasPressedThisFrame)
                 MenuManager.instance.startGame();
             else if (Keyboard.current.rKey.wasPressedThisFrame)
                 MenuManager.instance.restart();

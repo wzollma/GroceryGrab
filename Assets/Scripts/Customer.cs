@@ -206,7 +206,7 @@ public class Customer : MonoBehaviour
             return;        
 
         Item touchedItem = other.gameObject.GetComponent<Item>();
-        if (touchedItem.itemName.Equals(getItemInfoAtTopOfList().itemPrefab.itemName) && !touchedItem.destroyed && touchedItem.canBeGrabbedByCustomer(this))
+        if (getItemInfoAtTopOfList() != null && touchedItem != null && touchedItem.itemName.Equals(getItemInfoAtTopOfList().itemPrefab.itemName) && !touchedItem.destroyed && touchedItem.canBeGrabbedByCustomer(this))
         {
             Debug.Log("touchedItem " + touchedItem.itemName);
             customerTakeItem(touchedItem);

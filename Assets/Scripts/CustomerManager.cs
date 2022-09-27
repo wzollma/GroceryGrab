@@ -25,8 +25,13 @@ public class CustomerManager : MonoBehaviour
 
         numAngryText.text = numAngryCustomers + "/" + loseNumAngryCustomers;
 
-        if (numAngryCustomers >= loseNumAngryCustomers)
+        if (shouldLose())
             lose();
+    }
+
+    public bool shouldLose()
+    {
+        return numAngryCustomers >= loseNumAngryCustomers;
     }
 
     void lose()

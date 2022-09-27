@@ -80,6 +80,9 @@ public class OutlineScript : MonoBehaviour
 
     public void setOutlineOn(bool on)
     {
+        if (outlineRenderer == null || outlineRenderer.gameObject == null)
+            Debug.LogError("outlineRend on: " + gameObject.name + " is null");
+
         outlineRenderer.gameObject.SetActive(on);
     }
 }

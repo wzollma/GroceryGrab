@@ -47,7 +47,7 @@ public class CustomerSpawner : MonoBehaviour
 
     int getWave()
     {
-        int val = Mathf.Clamp((int)Mathf.Floor((Time.time + AudioManager.instance.FADE_TIME / 2) / (TIME_TO_NEXT_SUBWAVE * 3)), 0, 3);
+        int val = Mathf.Clamp((int)Mathf.Floor((Time.time/* + AudioManager.instance.FADE_TIME / 2*/) / (TIME_TO_NEXT_SUBWAVE * 3)) % 3, 0, 3);
 
         if (val > 2)
             val = 2;

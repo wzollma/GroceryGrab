@@ -19,6 +19,7 @@ public class MenuManager : MonoBehaviour
     {
         instance = this;
 
+        startAlpha = mainMenu.color.a;
         mainMenu.gameObject.SetActive(true);
         HUDObjHolder.SetActive(false);        
         gameOverMenu.gameObject.SetActive(false);
@@ -35,12 +36,13 @@ public class MenuManager : MonoBehaviour
     }
 
     public void lose()
-    {
-        Time.timeScale = 0;
-        
+    {        
         Color prevColor = gameOverMenu.color;
         gameOverMenu.color = new Color(prevColor.r, prevColor.g, prevColor.b, startAlpha);
-        //StartCoroutine(fadeColorImage(gameOverMenu, true, startAlpha));
+        gameOverMenu.enabled = true;
+        gameOverMenu.gameObject.SetActive(true);
+        StartCoroutine(fadeColorImage(gameOverMenu, true, startAlpha));
+        Time.timeScale = 0;
     }
 
     public void quit()
@@ -60,28 +62,31 @@ public class MenuManager : MonoBehaviour
         else
             Time.timeScale = 1;
 
-        float targetAlpha = on ? startAlpha : 0;
-
-        float timer = 0;
-
-        Color prevColor = img.color;
-
-        while (timer < fadeTime)
-        {
-            timer += Time.unscaledDeltaTime;
-
-            prevColor = img.color;
-            img.color = new Color(prevColor.r, prevColor.g, prevColor.b, Mathf.Lerp(beginAlpha, targetAlpha, timer / fadeTime));
-
-            yield return null;
-        }
-
-        img.color = new Color(prevColor.r, prevColor.g, prevColor.b, targetAlpha);
-
         if (!on)
         {
-            img.gameObject.SetActive(false);
-            HUDObjHolder.SetActive(true);
+            float targetAlpha = on ? startAlpha : 0;
+
+            float timer = 0;
+
+            Color prevColor = img.color;
+
+            while (timer < fadeTime)
+            {
+                timer += Time.unscaledDeltaTime;
+
+                prevColor = img.color;
+                img.color = new Color(prevColor.r, prevColor.g, prevColor.b, Mathf.Lerp(beginAlpha, targetAlpha, timer / fadeTime));
+
+                yield return null;
+            }
+
+            img.color = new Color(prevColor.r, prevColor.g, prevColor.b, targetAlpha);
+
+            if (!on)
+            {
+                img.gameObject.SetActive(false);
+                HUDObjHolder.SetActive(true);
+            }
         }
     }
 }
