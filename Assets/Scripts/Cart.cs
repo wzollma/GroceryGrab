@@ -48,6 +48,8 @@ public class Cart : MonoBehaviour, Interactable
     public void move(Vector3 target, float moveSpeed)
     {
         //transform.position = Vector3.MoveTowards(transform.position, target - getDiffFromGFXCenter(), moveSpeed * Time.deltaTime);
+        Player player = Player.instance;
+        target = player.transform.position + player.transform.forward * player.GetComponent<Interactor>().getCartInteractDist();
         Vector3 targetVel = (target - getDiffFromGFXCenter() - transform.position);
         rb.velocity = new Vector3(targetVel.x, 0, targetVel.z) * this.moveSpeed;
         //rb.AddForce(new Vector3(targetVel.x, 0, targetVel.z), ForceMode.Acceleration);

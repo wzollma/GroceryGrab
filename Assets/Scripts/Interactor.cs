@@ -15,6 +15,8 @@ public class Interactor : MonoBehaviour
     private float itemHoldEpsilon = .1f;
     [SerializeField]
     private float interactDistance = 1f;
+    [SerializeField]
+    private float cartInteractDist = .5f;
 
     Interactable curInteractable;
     Interactable lastHighlightedItem;
@@ -25,6 +27,11 @@ public class Interactor : MonoBehaviour
     void Start()
     {
         //GetComponent
+    }
+
+    public float getCartInteractDist()
+    {
+        return cartInteractDist;
     }
 
     public Interactable getCurInteractable()

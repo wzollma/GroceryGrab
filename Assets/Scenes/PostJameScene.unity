@@ -55399,6 +55399,10 @@ PrefabInstance:
       propertyPath: cameraTarget
       value: 
       objectReference: {fileID: 3058725663056469763}
+    - target: {fileID: 1678130562, guid: 3bb25dfb1da54754ea17b1064d9cbca7, type: 3}
+      propertyPath: cartInteractDist
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1075208436329028451, guid: 3bb25dfb1da54754ea17b1064d9cbca7,
         type: 3}
       propertyPath: staminaFillImage
