@@ -292,6 +292,7 @@ public class Customer : MonoBehaviour
         {
             anim.SetBool("DIALOGUE", state.Equals(State.Browsing) && topItem != null && topItem.isRequest);
             anim.SetBool("ANGRY", state.Equals(State.Angry));
+            anim.SetBool("GRAB", state.Equals(State.GrabbingItem));
         }
 
         if (AIDest != null)
