@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject HUDObjHolder;
     [SerializeField] Image gameOverMenu;
     [SerializeField] float fadeTime;
+    [SerializeField] MenuOverlay mainMenuScript;
 
     public static MenuManager instance;
 
@@ -26,7 +27,14 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void startGame()
+    public void tutLeftClick()
+    {
+        // calling is done handles menu text
+        if (mainMenuScript.isDone())
+            startGame();        
+    }
+
+    private void startGame()
     {
         AudioManager.instance.stopMenuTrack();
         AudioManager.startThemes();
