@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fd7b46fdaab094bb18763e891d7378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMaterial: {fileID: 2100000, guid: 8388d176ee2cd724a88225af955c3207, type: 2}
-  outlineScaleFactor: -1.02
+  outlineMaterial: {fileID: 2100000, guid: 6bc771b2bde7c7141a95d3d7c3fd14e5, type: 2}
+  outlineScaleFactor: -1.13
   outlineColor: {r: 1, g: 1, b: 1, a: 0}
   startYRot: 0
-  rotVec: {x: 0, y: 180, z: 0}
+  rotVec: {x: 0, y: -0, z: 0}
   offset: {x: 0, y: 0, z: 0}
   scaleMult: 0
   scaleVec: {x: 0, y: 0, z: 0}
