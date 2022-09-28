@@ -24,7 +24,6 @@ Material:
   m_Shader: {fileID: 4800000, guid: ee7e4c9a5f6364b688a332c67fc32cca, type: 3}
   m_ValidKeywords:
   - _CLEARCOAT
-  - _RECEIVE_SHADOWS_OFF
   - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -1495,7 +1494,7 @@ Material:
     - _RGBMaskUV: 0
     - _RGBNormalBlend: 0
     - _RGBUseVertexColors: 0
-    - _ReceiveShadows: 0
+    - _ReceiveShadows: 1
     - _RedColorThemeIndex: 0
     - _RedTextureUV: 0
     - _RenderingReduceClipDistance: 0
