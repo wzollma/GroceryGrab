@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936d6e42df31ca94295f696ea57d0ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBreakable: 1
   UIRotationSpeed: 40
   nonTriggerCollider: {fileID: 4921112305336231416}
   triggerCollider: {fileID: 9065629340984130748}

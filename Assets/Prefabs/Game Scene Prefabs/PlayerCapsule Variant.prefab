@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7068827283400824196, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
+      propertyPath: kickStrength
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7068827283400824196, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
       propertyPath: staminaFillImage
       value: 
       objectReference: {fileID: 0}
@@ -31,6 +36,16 @@ PrefabInstance:
         type: 3}
       propertyPath: interactDistance
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393215578589016640, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393215578589016640, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5393215578589016642, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
@@ -136,4 +151,5 @@ MonoBehaviour:
   cameraTarget: {fileID: 0}
   itemFollowSpeed: 10
   itemHoldEpsilon: 0.01
-  interactDistance: 3
+  interactDistance: 2.5
+  cartInteractDist: 2.5

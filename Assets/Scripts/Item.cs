@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(OutlineScript))]
 public class Item : MonoBehaviour, Interactable
 {
+    [SerializeField] bool isBreakable;
     [SerializeField] float UIRotationSpeed;
     public Collider nonTriggerCollider;
     public Collider triggerCollider;
@@ -112,7 +113,7 @@ public class Item : MonoBehaviour, Interactable
     {
         Debug.Log("destroying item: " + name);
         destroyed = true;
-        Destroy(gameObject);        
+        Destroy(gameObject);
     }
 
     public bool canBeGrabbedByCustomer(Customer customer)
@@ -156,8 +157,24 @@ public class Item : MonoBehaviour, Interactable
         if (!pickedUp && grabbable && (collision.gameObject.layer.Equals(LayerMask.NameToLayer("Ground")) || collision.gameObject.GetComponent<Cart>() != null))
         {
             Debug.Log("item: " + itemName + " hitting ground");
-            AudioManager.instance.Play("drop" + Random.Range(1, 5));
+            AudioManager.instance.Play("drop" + Random.Range(1, isBreakable ? 5 : 4));
             grabbable = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!pickedUp && !grabbable && (other.gameObject.GetComponentInParent<Player>() != null))
+        {
+            Vector3 distVec = (transform.position - Player.instance.transform.position).normalized;
+            Vector3 velVec = new Vector3(distVec.x, 0, distVec.z) * Player.instance.getKickStrength();
+            //rb.AddForce(velVec);
+
+            //if (rb.velocity.magnitude > Player.instance.getKickMaxVel())
+            //{
+            //    Debug.LogError("maxing");
+                rb.velocity = velVec;
+            //}
         }
     }
 }

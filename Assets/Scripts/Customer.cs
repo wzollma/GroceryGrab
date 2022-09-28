@@ -209,6 +209,8 @@ public class Customer : MonoBehaviour
         if (getItemInfoAtTopOfList() != null && touchedItem != null && touchedItem.itemName.Equals(getItemInfoAtTopOfList().itemPrefab.itemName) && !touchedItem.destroyed && touchedItem.canBeGrabbedByCustomer(this))
         {
             Debug.Log("touchedItem " + touchedItem.itemName);
+            if (touchedItem.Equals(Player.instance.GetComponent<Interactor>().getCurInteractable()))
+                Player.instance.GetComponent<Interactor>().playReleaseAnim();
             customerTakeItem(touchedItem);
         }
     }

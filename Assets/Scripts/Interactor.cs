@@ -134,14 +134,19 @@ public class Interactor : MonoBehaviour
     {        
         if (curInteractable != null)
         {
-            handAnim.SetBool("GRAB", false);
-            handAnim.SetBool("RELEASE", true);
-            handAnim.Play("rig_001|IDLE", 0);
-            StartCoroutine(resetDropAnim());
+            playReleaseAnim();
             curInteractable.onDrop();
         }
 
         curInteractable = null;
+    }
+
+    public void playReleaseAnim()
+    {
+        handAnim.SetBool("GRAB", false);
+        handAnim.SetBool("RELEASE", true);
+        handAnim.Play("rig_001|IDLE", 0);
+        StartCoroutine(resetDropAnim());
     }
 
     public IEnumerator resetDropAnim()

@@ -55399,15 +55399,21 @@ PrefabInstance:
       propertyPath: cameraTarget
       value: 
       objectReference: {fileID: 3058725663056469763}
-    - target: {fileID: 1678130562, guid: 3bb25dfb1da54754ea17b1064d9cbca7, type: 3}
-      propertyPath: cartInteractDist
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1075208436329028451, guid: 3bb25dfb1da54754ea17b1064d9cbca7,
         type: 3}
       propertyPath: staminaFillImage
       value: 
       objectReference: {fileID: 1869516046}
+    - target: {fileID: 6473114774800319312, guid: 3bb25dfb1da54754ea17b1064d9cbca7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473114774800319325, guid: 3bb25dfb1da54754ea17b1064d9cbca7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248839685159966539, guid: 3bb25dfb1da54754ea17b1064d9cbca7,
         type: 3}
       propertyPath: m_Name
@@ -55561,6 +55567,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 895463746, guid: 27676f59904696f41929ed016a95ec64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6235865571106820504, guid: 27676f59904696f41929ed016a95ec64,
         type: 3}
       propertyPath: m_Name

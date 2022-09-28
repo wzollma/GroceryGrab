@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
 
+    [SerializeField] private float kickStrength;
     [SerializeField] private float staminaBarSize;
     [SerializeField] private Image staminaFillImage;
 
@@ -40,6 +41,9 @@ public class Player : MonoBehaviour
             else if (Keyboard.current.rKey.wasPressedThisFrame)
                 MenuManager.instance.restart();            
         }
+
+        if (Keyboard.current.rKey.wasPressedThisFrame)
+            MenuManager.instance.restart();
 
         Cursor.visible = true;
 
@@ -84,5 +88,10 @@ public class Player : MonoBehaviour
     public bool canSprint()
     {
         return staminaAmount > 0 && !cantSprint;
+    }
+
+    public float getKickStrength()
+    {
+        return kickStrength;
     }
 }

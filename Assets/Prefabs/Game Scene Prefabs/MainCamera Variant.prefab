@@ -227,5 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: USE PLAYER Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1886379281881258543, guid: ceb9480d6e96dc146a3d860b711d25b8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceb9480d6e96dc146a3d860b711d25b8, type: 3}
