@@ -20,8 +20,14 @@ public class Interactor : MonoBehaviour
 
     Interactable curInteractable;
     Interactable lastHighlightedItem;
+    Animator handAnim;
 
     bool holding;
+
+    private void Awake()
+    {
+        handAnim = cameraTrans.GetComponentInChildren<Animator>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -115,7 +121,11 @@ public class Interactor : MonoBehaviour
             curInteractable = lastHighlightedItem;
 
         if (curInteractable != null)
+        {
+            handAnim.SetBool("GRAB", true);
+            handAnim.SetBool("RELEASE", false);
             curInteractable.onPickUp();
+        }
 
         return curInteractable;
     }
@@ -123,9 +133,27 @@ public class Interactor : MonoBehaviour
     public void letGo()
     {        
         if (curInteractable != null)
+        {
+            handAnim.SetBool("GRAB", false);
+            handAnim.SetBool("RELEASE", true);
+            handAnim.Play("rig_001|IDLE", 0);
+            StartCoroutine(resetDropAnim());
             curInteractable.onDrop();
+        }
 
         curInteractable = null;
+    }
+
+    public IEnumerator resetDropAnim()
+    {
+        const float DROP_ANIM_TIME = 1.15f;
+        float startTime = Time.unscaledTime;
+
+        while (!handAnim.GetBool("GRAB") && (Time.unscaledTime - startTime < DROP_ANIM_TIME))
+        {
+            yield return null;
+            handAnim.SetBool("RELEASE", false);
+        }
     }
 
     public bool canInteract(out RaycastHit hit)
