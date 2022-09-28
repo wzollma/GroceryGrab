@@ -151,5 +151,5 @@ MonoBehaviour:
   cameraTarget: {fileID: 0}
   itemFollowSpeed: 10
   itemHoldEpsilon: 0.01
-  interactDistance: 2.5
+  interactDistance: 3.5
   cartInteractDist: 2.5
